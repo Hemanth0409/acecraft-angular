@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { AcecraftComponent } from './acecraft/acecraft.component';
+import { SchoolComponent } from './school/school.component';
+import { HomeComponent } from './home/home.component';
+const routes: Routes = [
+  {
+    path:"acecraft",component:AcecraftComponent
+  },{path:"school",component:HomeComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
