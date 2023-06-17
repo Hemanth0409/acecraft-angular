@@ -11,13 +11,20 @@
     width: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 550px;
+    padding-right: 20px;
+    padding-bottom: 400px;
 }
 
 #backgroundimg3 {
     background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home4.jpg);
     width: 100%;
+    padding-top: 550px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 400px;
 }
 
 h5 {
@@ -26,8 +33,4 @@ h5 {
 
 body h5:hover {
     color: black
-}
-
-body {
-    overflow-x: hidden;
 }
