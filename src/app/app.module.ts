@@ -8,6 +8,7 @@ import { SchoolComponent } from './school/school.component';
 import { HomeComponent } from './home/home.component';
 import { AcecraftComponent } from './acecraft/acecraft.component';
 import { BadgeModule } from 'primeng/badge';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BadgeModule } from 'primeng/badge';
     NavComponent,
     SchoolComponent,
     HomeComponent,
-    AcecraftComponent
+    AcecraftComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

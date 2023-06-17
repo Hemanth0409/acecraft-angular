@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./acecraft.component.css']
 })
 export class AcecraftComponent {
-
+img='assets/images/formal_man'
 }

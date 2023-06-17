@@ -1,0 +1,33 @@
+.main {
+    background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Home-1.jpg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#backgroundimg2 {
+    background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home3.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#backgroundimg3 {
+    background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home4.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+h5 {
+    color: white
+}
+
+body h5:hover {
+    color: black
+}
+
+body {
+    overflow-x: hidden;
+}

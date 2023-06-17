@@ -5,12 +5,14 @@ import { SchoolComponent } from './school/school.component';
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
-    path:"acecraft",component:AcecraftComponent
-  },{path:"school",component:HomeComponent}
+    path: '',
+    component: AcecraftComponent,
+  },
+  { path: 'school', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
