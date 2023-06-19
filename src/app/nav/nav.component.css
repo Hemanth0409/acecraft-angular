@@ -1,3 +1,8 @@
 #navfont {
     font-family: 'Courier New', monospace;
 }
+
+a:focus {
+    border-bottom: solid gray .2em;
+    margin-bottom: 20px;
+}

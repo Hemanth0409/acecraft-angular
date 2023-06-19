@@ -13,18 +13,24 @@
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 550px;
-    padding-right: 20px;
-    padding-bottom: 400px;
+    padding-bottom: 200px;
+    transition: all .7s ease-in-out;
 }
 
 #backgroundimg3 {
     background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home4.jpg);
     width: 100%;
     padding-top: 550px;
+    padding-bottom: 200px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-bottom: 400px;
+    transition: all .7s ease-in-out;
+}
+
+#backgroundimg3:hover,
+#backgroundimg2:hover {
+    transform: scale(1.1);
 }
 
 h5 {

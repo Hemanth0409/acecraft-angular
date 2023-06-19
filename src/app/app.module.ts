@@ -5,19 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { SchoolComponent } from './school/school.component';
-import { HomeComponent } from './home/home.component';
 import { AcecraftComponent } from './acecraft/acecraft.component';
 import { BadgeModule } from 'primeng/badge';
 import { FooterComponent } from './footer/footer.component';
+import { SchooluniformComponent } from './schooluniform/schooluniform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     SchoolComponent,
-    HomeComponent,
+ 
     AcecraftComponent,
-    FooterComponent
+    FooterComponent,
+    SchooluniformComponent
   ],
   imports: [
     BrowserModule,
