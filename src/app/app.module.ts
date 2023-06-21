@@ -10,6 +10,9 @@ import { BadgeModule } from 'primeng/badge';
 import { FooterComponent } from './footer/footer.component';
 import { SchooluniformComponent } from './schooluniform/schooluniform.component';
 import { EnterprisesComponent } from './enterprises/enterprises.component';
+import { NotesComponent } from './notes/notes.component';
+import { AirenMaskComponent } from './airen-mask/airen-mask.component';
+import { SettingComponent } from './setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { EnterprisesComponent } from './enterprises/enterprises.component';
     AcecraftComponent,
     FooterComponent,
     SchooluniformComponent,
-    EnterprisesComponent
+    EnterprisesComponent,
+    NotesComponent,
+    AirenMaskComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule,
