@@ -9,6 +9,7 @@ import { AcecraftComponent } from './acecraft/acecraft.component';
 import { BadgeModule } from 'primeng/badge';
 import { FooterComponent } from './footer/footer.component';
 import { SchooluniformComponent } from './schooluniform/schooluniform.component';
+import { EnterprisesComponent } from './enterprises/enterprises.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SchooluniformComponent } from './schooluniform/schooluniform.component'
  
     AcecraftComponent,
     FooterComponent,
-    SchooluniformComponent
+    SchooluniformComponent,
+    EnterprisesComponent
   ],
   imports: [
     BrowserModule,

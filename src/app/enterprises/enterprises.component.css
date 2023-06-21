@@ -1,0 +1,49 @@
+        .main {
+            background-size: cover;
+            background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-1.jpg);
+            background-position: center 120px;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        
+        .main .row {
+            width: 100.9%;
+        }
+        
+        #font {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .workwear {
+            margin-top: 440px;
+            color: #978f8f;
+            margin-bottom: 130px;
+        }
+        
+        .img1 {
+            background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-2.png);
+            background-position: center;
+            background-size: 180%;
+        }
+        
+        .img2 {
+            background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-3.png);
+            background-position: center;
+            background-size: 180%;
+        }
+        
+        .img3 {
+            background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-4.png);
+            background-position: center;
+            background-size: 180%;
+            background-repeat: no-repeat;
+        }
+        
+        #layout2 {
+            padding-bottom: 300px;
+        }
+        
+        body {
+            font-family: "proxima";
+        }

@@ -28,10 +28,11 @@
     transition: all .7s ease-in-out;
 }
 
-#backgroundimg3:hover,
+
+/* #backgroundimg3:hover,
 #backgroundimg2:hover {
     transform: scale(1.1);
-}
+} */
 
 h5 {
     color: white
