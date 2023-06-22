@@ -26,12 +26,12 @@ import { SettingComponent } from './setting/setting.component';
     EnterprisesComponent,
     NotesComponent,
     AirenMaskComponent,
-    SettingComponent
+    SettingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BadgeModule
+    BadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

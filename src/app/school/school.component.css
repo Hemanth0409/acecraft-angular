@@ -36,3 +36,25 @@
     padding-top: 100px;
     color: #978f8f;
 }
+
+.main3 {
+    background-size: 100%;
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-41.jpg );
+    background-position: top;
+    min-height: 565px !important;
+    background-repeat: no-repeat;
+    font-size: 30px !important;
+}
+
+.signature {
+    font-family: 'Blenheim Signature', sans-serif;
+    font-size: 18px;
+    position: relative;
+    margin: auto;
+    width: 200px;
+}
+
+body {
+    overflow-x: hidden;
+    color: #978f8f;
+}

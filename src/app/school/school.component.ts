@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./school.component.css'],
 })
 export class SchoolComponent {
+  imgURL="https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/BK,.jpg"
+  
   school_logo = [
     {
       img: 'http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg',
@@ -43,4 +45,5 @@ name:'CISB'
       name:'NHIS'
     },
   ];
+
 }
