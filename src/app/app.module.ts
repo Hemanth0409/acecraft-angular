@@ -13,6 +13,7 @@ import { EnterprisesComponent } from './enterprises/enterprises.component';
 import { NotesComponent } from './notes/notes.component';
 import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 import { SettingComponent } from './setting/setting.component';
+import { CollegeComponent } from './college/college.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SettingComponent } from './setting/setting.component';
     NotesComponent,
     AirenMaskComponent,
     SettingComponent,
+    CollegeComponent,
   ],
   imports: [
     BrowserModule,

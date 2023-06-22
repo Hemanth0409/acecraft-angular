@@ -7,5 +7,4 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-
 }

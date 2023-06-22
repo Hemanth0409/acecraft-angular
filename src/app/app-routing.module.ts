@@ -7,6 +7,7 @@ import { EnterprisesComponent } from './enterprises/enterprises.component';
 import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 import { NotesComponent } from './notes/notes.component';
 import { SettingComponent } from './setting/setting.component';
+import { CollegeComponent } from './college/college.component';
 const routes: Routes = [
   {
     path: '',
@@ -16,7 +17,9 @@ const routes: Routes = [
   { path: 'schooluniform', component: SchooluniformComponent },
   { path: 'enterprises', component: EnterprisesComponent },
   { path: 'notes', component: NotesComponent },
-  { path: 'airen', component: AirenMaskComponent },{ path: 'ssetting', component: SettingComponent},
+  { path: 'airen', component: AirenMaskComponent },
+  { path: 'setting', component: SettingComponent},
+  {path:'college',component:CollegeComponent}
 ];
 
 @NgModule({
