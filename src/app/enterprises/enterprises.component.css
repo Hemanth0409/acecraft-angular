@@ -20,7 +20,7 @@
             color: #978f8f;
             margin-bottom: 130px;
         }
-        
+        /*         
         .img1 {
             background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-2.png);
             background-position: center;
@@ -31,7 +31,9 @@
             color: #978f8f;
             position: relative;
             z-index: 0;
-        }
+        } */
+        /* http: //cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-3.png
+        http: //cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-4.png */
         
         .cards .card-cont {
             position: absolute;
@@ -44,4 +46,8 @@
         
         #imgtext {
             margin-top: -600px;
+        }
+        
+        body {
+            font-family: "proxima-bold";
         }

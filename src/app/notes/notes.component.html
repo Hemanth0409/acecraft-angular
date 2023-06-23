@@ -1,4 +1,15 @@
+<h4 class="text-center fs-1 fw-bold m-4 text-black">
+    Blogs</h4>
 <div class="container-fluid">
-    <h4 class="text-center fs-2 fw-bolder text-black">Blogs</h4>
-
+    <div class="row  justify-content-center">
+        <ng-container *ngFor=" let details of Notes ">
+            <div class="col-9 col-lg-6 ">
+                <div class="shadow-lg pt-2 ps-2 pe-2 pb-5 mb-5 bg-white ">
+                    <a routerLink=" " class="text-center text-decoration-none ">
+                        <div class=" bg-black text-white " style="padding-top: 120px;padding-bottom: 120px;font-size: 15px; "> {{details.p|uppercase}}</div>
+                    </a>
+                </div>
+            </div>
+        </ng-container>
+    </div>
 </div>
