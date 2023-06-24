@@ -1,27 +1,82 @@
-[{
-    "p": "styling accessories that complement your formal wear"
-}, {
-    "p": "5 classic looks for her"
-}, {
-    "p": "acing  your formal attire"
-}, {
-    "p": "selecting & styling your workwear"
-}, {
-    "p": "let's talk 'body types',women!"
-}, {
-    "p": "5 classic looks for him"
-}, {
-    "p": "tips for a great outfit"
-}, {
-    "p": "dressing to succeed :the importance of 'formals'"
-}, {
-    "p": "workwear for all season:the women edit"
-}, {
-    "p": "the acecraft differnece"
-}, {
-    "p": "corporate to cupcakes!story of a superwoman"
-}, {
-    "p": "how to complete your college look"
-}, {
-    "p": "dress the right way to impress the right way"
-}]
+{
+    "notes": [{
+        "p": "styling accessories that complement your formal wear"
+    }, {
+        "p": "5 classic looks for her"
+    }, {
+        "p": "acing  your formal attire"
+    }, {
+        "p": "selecting & styling your workwear"
+    }, {
+        "p": "let's talk 'body types',women!"
+    }, {
+        "p": "5 classic looks for him"
+    }, {
+        "p": "tips for a great outfit"
+    }, {
+        "p": "dressing to succeed :the importance of 'formals'"
+    }, {
+        "p": "workwear for all season:the women edit"
+    }, {
+        "p": "the acecraft differnece"
+    }, {
+        "p": "corporate to cupcakes!story of a superwoman"
+    }, {
+        "p": "how to complete your college look"
+    }, {
+        "p": "dress the right way to impress the right way"
+    }],
+    "school_logo": [{
+            "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg",
+            "link": "/schooluniform"
+
+        },
+        {
+            "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/rvschool.png",
+            "link": "/schooluniform"
+
+        },
+        {
+            "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/sophias.jpg",
+            "link": "/schooluniform"
+
+        },
+        {
+            "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/kumarans.png",
+            "link": " /schooluniform"
+
+        },
+        {
+            "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Logo-%20New%20Horizon%20Gurukul.jpg",
+            "link": " /schooluniform"
+
+        },
+        {
+            "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/cgis.png",
+            "link": "/schooluniform"
+
+        },
+        {
+            "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/NHIS%20LOGO%20Jpeg.jpg",
+            "link": "/schooluniform"
+
+        }
+    ],
+    "acecraft_main1": [{
+        "class": "main",
+        "text1": "Choose Class",
+        "text2": "of Greatess.",
+        "text3": "ACECRAFT FOR COLLEGES"
+    }],
+    "acecraft_main2": [{
+        "class": "backgroundimg2 me-2",
+        "text1": "A grade",
+        "text2": "over the common.",
+        "text3": "ACECRAFT FOR SCHOOL"
+    }, {
+        "class": "backgroundimg3",
+        "text1": "workwear",
+        "text2": "Redefined.",
+        "text3": "ACECRAFT FOR ENTERPRISES"
+    }]
+}

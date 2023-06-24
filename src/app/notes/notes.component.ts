@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component,OnInit } from '@angular/core';
+import { ServiceService } from 'src/services/service.service';
 
 @Component({
   selector: 'app-notes',
@@ -7,13 +8,13 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./notes.component.css']
 })
 export class NotesComponent implements OnInit {
-  title = 'json-read-example';
-  Notes: any;
-  url: string = 'assets/notes.json';
-  constructor(private http: HttpClient) {}
+
+  
+  notes:any[]=[]
+  constructor(private service:ServiceService) {}
   ngOnInit() {
-    this.http.get("assets/notes.json").subscribe((res) => {
-      this.Notes = res;
+    this.service.getNotes().subscribe((res) => {
+      this.notes = res;
     });
   }  
 }

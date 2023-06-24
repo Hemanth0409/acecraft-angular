@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
 }
 
-#backgroundimg2 {
+.backgroundimg2 {
     background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home3.jpg);
     width: 100%;
     background-size: cover;
@@ -17,7 +17,7 @@
     transition: all .7s ease-in-out;
 }
 
-#backgroundimg3 {
+.backgroundimg3 {
     background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home4.jpg);
     width: 100%;
     padding-top: 550px;
@@ -27,12 +27,6 @@
     background-repeat: no-repeat;
     transition: all .7s ease-in-out;
 }
-
-
-/* #backgroundimg3:hover,
-#backgroundimg2:hover {
-    transform: scale(1.1);
-} */
 
 h5 {
     color: white
