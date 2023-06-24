@@ -9,6 +9,6 @@ export class AirenMaskComponent implements OnInit{
 constructor(private service:ServiceService){}
 airen_mask:any[]=[]
 ngOnInit(): void {
-  this.service.gteAiren_mask().subscribe((res)=>{this.airen_mask=res})
+  this.service.getAiren_mask().subscribe((res)=>{this.airen_mask=res})
 }
 }

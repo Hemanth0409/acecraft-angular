@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Model, acecraft_main1, acecraft_main2, school_logo,airen_mask } from 'src/models/model';
+import { Model, acecraft_main1, acecraft_main2, school_logo,airen_mask, enterpriseimages } from 'src/models/model';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +11,7 @@ schoollogo:string='http://localhost:3000/school_logo'
 acecraft_main1:string='http://localhost:3000/acecraft_main1'
 acecraft_main2:string='http://localhost:3000/acecraft_main2'
 airen_mask:string='http://localhost:3000/airen_mask'
+enterprises_card:string='  http://localhost:3000/enterpriseimages'
   constructor(private http:HttpClient) { }
 
   getNotes(){
@@ -26,8 +27,11 @@ airen_mask:string='http://localhost:3000/airen_mask'
   getAcecraft_main2(){
     return this.http.get<acecraft_main2[]>(this.acecraft_main2)
   }
-  gteAiren_mask(){
+  getAiren_mask(){
     return this.http.get<airen_mask[]>(this.airen_mask)
+  }
+  getEnterprices_card(){
+    return this.http.get<enterpriseimages[]>(this.enterprises_card)
   }
  
 }

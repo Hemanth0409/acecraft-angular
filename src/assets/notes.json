@@ -83,5 +83,34 @@
         "text1": "Error (404)",
         "text2": "Page you are requesting does not exist.",
         "text3": "Go to Home"
-    }]
+    }],
+    "enterpriseimages": [{
+            "classname": "col-4 card img1 ",
+            "text1": "F(IT) MATTERS",
+            "text2": "A size for every one.",
+            "text1class": "card-text text-center text-secondary fs-5 mt-5",
+            "text2class": "card-text text-secondary fs-2 fw-lighter mt-4 "
+        },
+        {
+            "classname": "col-4 card img2",
+            "text1": "PERSONALISED BRANDING",
+            "text2": "Your design.",
+            "text3": "Our customization.",
+            "text1class": "card-text text-center text-secondary fs-5 mt-5",
+            "text2class": "card-text text-center text-secondary fs-2 fw-lighter mt-4 ",
+            "text3class": "card-text text-center text-secondary fs-2 fw-lighter"
+        },
+        {
+            "classname": "col-4 card img3",
+            "text1": "TEAM UP FOR TEAM WEAR",
+            "text2": "Bulk orders delivered.",
+            "text3": "seamlessly",
+            "text1class": "card-text text-center text-secondary fs-5 mt-5",
+            "text2class": "card-text text-center text-secondary fs-2 fw-lighter ",
+            "text3class": "card-text text-center text-secondary fs-2 fw-lighter "
+
+
+
+        }
+    ]
 }

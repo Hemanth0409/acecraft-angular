@@ -29,6 +29,17 @@
         We still do. They're comfy, relaxed and designed to suit your workplace.
       </p>
     </span>
+        <div class="container pt-5">
+            <div class="row justify-content-between">
+                <div *ngFor="let enterprise of enterpriseimages" [class]="enterprise.classname" style="border: none;">
+                    <div class="card-body mt-5 ">
+                        <h6 [class]="enterprise.text1class">{{enterprise.text1}}</h6>
+                        <h2 [class]="enterprise.text2class">{{enterprise.text2}}</h2>
+                        <h2 [class]="enterprise.text3class">{{enterprise.text3}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 </body>

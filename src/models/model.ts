@@ -24,3 +24,12 @@ export interface airen_mask{
     text2:string;
     text3:string
 }
+export interface enterpriseimages{
+    classname:string ,
+    text1:string ,
+    text2: string,
+text3: string,
+    text1class:string,
+    text2class:string,
+    text3class?: string
+}
