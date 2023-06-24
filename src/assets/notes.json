@@ -78,5 +78,10 @@
         "text1": "workwear",
         "text2": "Redefined.",
         "text3": "ACECRAFT FOR ENTERPRISES"
+    }],
+    "airen_mask": [{
+        "text1": "Error (404)",
+        "text2": "Page you are requesting does not exist.",
+        "text3": "Go to Home"
     }]
 }

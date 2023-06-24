@@ -1,15 +1,16 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Model, acecraft_main1, acecraft_main2, school_logo } from 'src/models/model';
+import { Model, acecraft_main1, acecraft_main2, school_logo,airen_mask } from 'src/models/model';
 @Injectable({
   providedIn: 'root'
 })
-export class ServiceService implements OnInit {
+export class ServiceService  {
 
   Notesurl:string='http://localhost:3000/notes'
 schoollogo:string='http://localhost:3000/school_logo'
 acecraft_main1:string='http://localhost:3000/acecraft_main1'
 acecraft_main2:string='http://localhost:3000/acecraft_main2'
+airen_mask:string='http://localhost:3000/airen_mask'
   constructor(private http:HttpClient) { }
 
   getNotes(){
@@ -25,8 +26,8 @@ acecraft_main2:string='http://localhost:3000/acecraft_main2'
   getAcecraft_main2(){
     return this.http.get<acecraft_main2[]>(this.acecraft_main2)
   }
-  ngOnInit(): void {
-    
-  
+  gteAiren_mask(){
+    return this.http.get<airen_mask[]>(this.airen_mask)
   }
+ 
 }
