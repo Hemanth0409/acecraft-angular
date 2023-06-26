@@ -14,7 +14,10 @@ import { NotesComponent } from './notes/notes.component';
 import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 import { SettingComponent } from './setting/setting.component';
 import { CollegeComponent } from './college/college.component';
-
+import { SignInComponent } from './sign-in/sign-in.component';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,11 +32,12 @@ import { CollegeComponent } from './college/college.component';
     AirenMaskComponent,
     SettingComponent,
     CollegeComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BadgeModule,HttpClientModule
+    BadgeModule,HttpClientModule,CardModule,ButtonModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

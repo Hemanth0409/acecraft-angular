@@ -8,6 +8,7 @@ import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 import { NotesComponent } from './notes/notes.component';
 import { SettingComponent } from './setting/setting.component';
 import { CollegeComponent } from './college/college.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'notes', component: NotesComponent },
   { path: 'airen', component: AirenMaskComponent },
   { path: 'setting', component: SettingComponent},
-  {path:'college',component:CollegeComponent}
+  {path:'college',component:CollegeComponent},
+  {path:'sign_in',component:SignInComponent}
 ];
 
 @NgModule({
