@@ -6,5 +6,11 @@ import { MenuItem } from 'primeng/api';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
+
 export class NavComponent {
+  public show:boolean = true;
+  toggle() {
+    this.show = !this.show;
+
+  }
 }

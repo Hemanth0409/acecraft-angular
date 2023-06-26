@@ -6,3 +6,30 @@ a:focus {
     border-bottom: solid gray .2em;
     margin-bottom: 20px;
 }
+
+.setting {
+    cursor: pointer;
+}
+
+.setting-dropdown {
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(2, 0, 36, 1) 100%);
+    color: #978F8F;
+    height: 100vh;
+    left: 82%;
+    width: 243px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.dropdown {
+    margin-right: 15px;
+}
+
+.dropdown:hover {
+    color: white;
+}
