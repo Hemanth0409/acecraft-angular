@@ -22,7 +22,7 @@ import { ViewProductComponent } from './products/view-product/view-product.compo
 import { SingleProductComponent } from './products/single-product/single-product.component';
 import { ProductsortPipe } from './productsort.pipe';
 import { SortPipe } from './sort.pipe';
-import { ItemsCountPipe } from './items-count.pipe';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { ItemsCountPipe } from './items-count.pipe';
     SingleProductComponent,
     ProductsortPipe,
     SortPipe,
-    ItemsCountPipe,
+  
   ],
   imports: [
     BrowserModule,

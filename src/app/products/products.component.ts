@@ -8,17 +8,17 @@ import { ProductService } from 'src/services/product.service';
 export class ProductsComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
-  //productsList:Products[] =[]; store the data from ProductsService -> getProducts()
   productsList: any[] = [];
+  // count=Object.keys(this.productsList).length
 
-  //Sort Pipe
+
   sortParam: any;
   sortDirection: any;
   optionSelected: any;
 
-  //lth
+
   onOptionsSelected(event: any) {
-    console.log(event.target.value); //option value will be sent as event
+    console.log(event.target.value); 
     this.optionSelected = event.target.value; //lth
     if (this.optionSelected === 'lth') {
       (this.sortParam = 'price'), (this.sortDirection = 'asc');
@@ -30,12 +30,20 @@ export class ProductsComponent implements OnInit {
       (this.sortParam = 'title'), (this.sortDirection = 'desc');
     }
   }
-
+count_school=0;
+count_honda=0
   //Consume the ProductsService
   ngOnInit() {
+    
     this.productService.getProducts().subscribe(
       (response) => {
         this.productsList = response;
+        for (const x of this.productsList) {
+        //  if(x.value=='school')
+          this.count_school++;
+          // else if(x.value=='honda')
+          // this.count_honda++
+        }
       },
 
       (error) => {
@@ -43,4 +51,5 @@ export class ProductsComponent implements OnInit {
       }
     );
   }
+  
 }
