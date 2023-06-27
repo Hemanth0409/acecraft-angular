@@ -4,11 +4,11 @@
 
 .nav-link {
     color: #978F8F;
+    font-weight: 620;
 }
 
-a:focus {
-    border-bottom: solid gray .2em;
-    margin-bottom: 20px;
+.nav-link:hover {
+    color: white;
 }
 
 .setting {

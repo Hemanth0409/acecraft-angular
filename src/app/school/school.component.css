@@ -44,6 +44,7 @@
     min-height: 565px !important;
     background-repeat: no-repeat;
     font-size: 30px !important;
+    color: #978f8f;
 }
 
 .signature {
@@ -52,9 +53,28 @@
     position: relative;
     margin: auto;
     width: 200px;
+    color: #978f8f;
 }
 
 body {
     overflow-x: hidden;
+}
+
+#key {
+    font-size: medium;
+    position: relative;
+    animation: mymove 1s infinite;
     color: #978f8f;
+}
+
+@keyframes mymove {
+    0% {
+        bottom: 0px;
+    }
+    50% {
+        bottom: 5px;
+    }
+    100% {
+        bottom: 0px;
+    }
 }
