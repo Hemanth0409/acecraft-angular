@@ -1,116 +1,19 @@
 {
-    "notes": [{
-        "p": "styling accessories that complement your formal wear"
-    }, {
-        "p": "5 classic looks for her"
-    }, {
-        "p": "acing  your formal attire"
-    }, {
-        "p": "selecting & styling your workwear"
-    }, {
-        "p": "let's talk 'body types',women!"
-    }, {
-        "p": "5 classic looks for him"
-    }, {
-        "p": "tips for a great outfit"
-    }, {
-        "p": "dressing to succeed :the importance of 'formals'"
-    }, {
-        "p": "workwear for all season:the women edit"
-    }, {
-        "p": "the acecraft differnece"
-    }, {
-        "p": "corporate to cupcakes!story of a superwoman"
-    }, {
-        "p": "how to complete your college look"
-    }, {
-        "p": "dress the right way to impress the right way"
-    }],
-    "school_logo": [{
-            "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg",
-            "link": "/schooluniform"
-
-        },
-        {
-            "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/rvschool.png",
-            "link": "/schooluniform"
-
-        },
-        {
-            "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/sophias.jpg",
-            "link": "/schooluniform"
-
-        },
-        {
-            "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/kumarans.png",
-            "link": " /schooluniform"
-
-        },
-        {
-            "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Logo-%20New%20Horizon%20Gurukul.jpg",
-            "link": " /schooluniform"
-
-        },
-        {
-            "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/cgis.png",
-            "link": "/schooluniform"
-
-        },
-        {
-            "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/NHIS%20LOGO%20Jpeg.jpg",
-            "link": "/schooluniform"
-
-        }
-    ],
-    "acecraft_main1": [{
-        "class": "main",
-        "text1": "Choose Class",
-        "text2": "of Greatess.",
-        "text3": "ACECRAFT FOR COLLEGES"
-    }],
-    "acecraft_main2": [{
-        "class": "backgroundimg2 me-2",
-        "text1": "A grade",
-        "text2": "over the common.",
-        "text3": "ACECRAFT FOR SCHOOL"
-    }, {
-        "class": "backgroundimg3",
-        "text1": "workwear",
-        "text2": "Redefined.",
-        "text3": "ACECRAFT FOR ENTERPRISES"
-    }],
-    "airen_mask": [{
-        "text1": "Error (404)",
-        "text2": "Page you are requesting does not exist.",
-        "text3": "Go to Home"
-    }],
-    "enterpriseimages": [{
-            "classname": "col-4 card img1 ",
-            "text1": "F(IT) MATTERS",
-            "text2": "A size for every one.",
-            "text1class": "card-text text-center text-secondary fs-5 mt-5",
-            "text2class": "card-text text-secondary fs-2 fw-lighter mt-4 "
-        },
-        {
-            "classname": "col-4 card img2",
-            "text1": "PERSONALISED BRANDING",
-            "text2": "Your design.",
-            "text3": "Our customization.",
-            "text1class": "card-text text-center text-secondary fs-5 mt-5",
-            "text2class": "card-text text-center text-secondary fs-2 fw-lighter mt-4 ",
-            "text3class": "card-text text-center text-secondary fs-2 fw-lighter"
-        },
-        {
-            "classname": "col-4 card img3",
-            "text1": "TEAM UP FOR TEAM WEAR",
-            "text2": "Bulk orders delivered.",
-            "text3": "seamlessly",
-            "text1class": "card-text text-center text-secondary fs-5 mt-5",
-            "text2class": "card-text text-center text-secondary fs-2 fw-lighter ",
-            "text3class": "card-text text-center text-secondary fs-2 fw-lighter "
-
-
-
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

@@ -12,6 +12,7 @@ acecraft_main1:string='http://localhost:3000/acecraft_main1'
 acecraft_main2:string='http://localhost:3000/acecraft_main2'
 airen_mask:string='http://localhost:3000/airen_mask'
 enterprises_card:string='  http://localhost:3000/enterpriseimages'
+
   constructor(private http:HttpClient) { }
 
   getNotes(){
@@ -33,5 +34,4 @@ enterprises_card:string='  http://localhost:3000/enterpriseimages'
   getEnterprices_card(){
     return this.http.get<enterpriseimages[]>(this.enterprises_card)
   }
- 
-}
+ }
