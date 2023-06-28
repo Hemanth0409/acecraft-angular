@@ -10,59 +10,27 @@
         </div>
     </section>
     <section>
-        <div class="container" *ngIf="productsList">
+        <div class="container">
             <div class="row" style="margin-top: 50px; padding-bottom: 40px">
-                <div class="col-4 fs-5 fw-bold">SCHOOL</div>
-                <div class="col-4">-{{count_school}}item</div>
+                <div class="col-4 fs-5 fw-bold text-center">SCHOOL</div>
+                <div class="col-4 text-start">-{{ count_school }}item</div>
                 <div class="col-3" style="float: right">
                     <select (change)="onOptionsSelected($event)">
-                    <option value="" disabled selected hidden>SORT BY</option>
-                    <option value="lth">Price : Low to High</option>
-                    <option value="htl">Price : High to Low</option>
-                    <option value="nasc">Name : Ascending Order</option>
-                    <option value="ndesc">Name : Descending Order</option>
-                </select>
+                        <option value=" " disabled selected hidden>SORT BY</option>
+                        <option value="lth">Price : Low to High</option>
+                        <option value="htl">Price : High to Low</option>
+                        <option value="nasc">Name : Ascending Order</option>
+                        <option value="ndesc">Name : Descending Order</option>
+                    </select>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="card col-4" *ngFor="let item of productsList | sort : [sortParam, sortDirection]">
-                    <ng-container *ngIf="item.value == 'school'">
-                        <app-single-product [products]="item"> </app-single-product>
-                    </ng-container>
+                    <app-single-product [products]="item"> </app-single-product>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- <section>
-        <div class="container">
-            <div class="row" style="margin-top: 50px; padding-bottom: 40px">
-                <div class="col-4 fs-5 fw-bold">HONDA CAR'S DEALER MANPOWER UNIFORMS</div>
-                <div class="col-3">-{{count_honda}}item </div>
-                <div class="col-3" style="float: right">
-                    <select (change)="onOptionsSelected($event)">
-                    <option value="" disabled selected hidden>SORT BY</option>
-                    <option value="lth">Price : Low to High</option>
-                    <option value="htl">Price : High to Low</option>
-                    <option value="nasc">Name : Ascending Order</option>
-                    <option value="ndesc">Name : Descending Order</option>
-                </select>
-                </div>
-            </div>
-        </div>
-        <div class="container" [hidden]="">
-            <div class="row">
-                <div class="card col-4" *ngFor="let item of productsList | sort : [sortParam, sortDirection]">
-                    <ng-container *ngIf="item.value == 'honda'">
-                        <h6 class="card-title">{{ item.title }}</h6>
-                        <app-single-product [products]="item"> </app-single-product>
-                    </ng-container>
-                </div>
-            </div>
-        </div>
-
-    </section> -->
-
 </body>

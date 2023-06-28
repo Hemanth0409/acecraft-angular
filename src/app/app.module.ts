@@ -23,7 +23,6 @@ import { SingleProductComponent } from './products/single-product/single-product
 import { ProductsortPipe } from './productsort.pipe';
 import { SortPipe } from './sort.pipe';
 
-
 @NgModule({
   declarations: [
     AppComponent,

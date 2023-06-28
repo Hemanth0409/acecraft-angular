@@ -22,7 +22,7 @@ export interface airen_mask{
 
     text1:string;
     text2:string;
-    text3:string
+    text3?:string
 }
 export interface enterpriseimages{
     classname:string ,

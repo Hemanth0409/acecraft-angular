@@ -9,7 +9,6 @@ export class ProductsComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
   productsList: any[] = [];
-  // count=Object.keys(this.productsList).length
 
 
   sortParam: any;
@@ -19,7 +18,7 @@ export class ProductsComponent implements OnInit {
 
   onOptionsSelected(event: any) {
     console.log(event.target.value); 
-    this.optionSelected = event.target.value; //lth
+    this.optionSelected = event.target.value; 
     if (this.optionSelected === 'lth') {
       (this.sortParam = 'price'), (this.sortDirection = 'asc');
     } else if (this.optionSelected === 'htl') {
@@ -31,7 +30,6 @@ export class ProductsComponent implements OnInit {
     }
   }
 count_school=0;
-count_honda=0
   //Consume the ProductsService
   ngOnInit() {
     
@@ -39,10 +37,7 @@ count_honda=0
       (response) => {
         this.productsList = response;
         for (const x of this.productsList) {
-        //  if(x.value=='school')
           this.count_school++;
-          // else if(x.value=='honda')
-          // this.count_honda++
         }
       },
 
