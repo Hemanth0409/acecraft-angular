@@ -23,7 +23,7 @@ export class ViewProductComponent implements OnInit{
   productData: any[]=[];
 cart:Cartlist={
   id: 0,
-   title: '',
+  title: '',
   productCode: '',
   brand: '',
   soldBy: '',
@@ -33,7 +33,9 @@ cart:Cartlist={
   gender: '',
   size: [],
   description: [],
-  imgSrc: ''
+  imgSrc: '',
+  totalprice: 0,
+  quantity: 0
 }
 quantity:number=1;
 addToCart(item:any){

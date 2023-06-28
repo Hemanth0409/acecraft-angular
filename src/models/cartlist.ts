@@ -11,4 +11,6 @@ export interface Cartlist {
     size: number[];
     description: string[];
     imgSrc: string;
+    totalprice:number;
+    quantity:number;
 }
