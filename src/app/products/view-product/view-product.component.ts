@@ -39,8 +39,15 @@ cart:Cartlist={
 }
 quantity:number=1;
 addToCart(item:any){
+  this.cart.id=item.id;
   this.cart.title=item.title;
   this.cart.originalPrice=item.originalPrice;
+  this.cart.price=item.price;
+  this.cart.imgSrc=item.imgSrc;
+  this.cart.quantity=item.quantity;
+  this.cart.totalprice=item.totalprice;
+  this.cart.size=item.size;
+  
   this.cartsvc.addToCart(this.cart);
   const Toast = Swal.mixin({
     toast: true,

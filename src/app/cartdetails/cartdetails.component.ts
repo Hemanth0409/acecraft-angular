@@ -33,8 +33,8 @@ export class CartdetailsComponent implements OnInit{
   debugger
   const intialValue = 0;
   this.cart_details=data
-  const total=this.cart_details.reduce((sum:any,item:any)=>sum+(item.fees*item.quantity),intialValue);
-  return total
+  const total=this.cart_details.reduce((sum:any,item:any)=>sum+(item.price*item.quantity),intialValue);
+  return total;
   }
   cart:Cartlist[]=[]
 

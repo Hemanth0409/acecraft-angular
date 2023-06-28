@@ -1,4 +1,4 @@
-<!-- <div class="container-fluid">
+<div class="container-fluid">
     <div class="row justify-content-center fs-1 mt-5">
         Your bag total is {{ totalPrice(cart) | currency : "INR" : "symbol" : "3.0" }}
     </div>
@@ -6,22 +6,22 @@
         <hr class="border-3">
         <div class="row">
             <div class="col-3">
-                <img [src]="item.imgSrc" alt=".." width="100%">
+                <img [src]="item.imgSrc" alt="" width="350px" height="350px">
             </div>
             <div class="col-5">
-                <div class="fs-4 fw-bold text-center text-black">{{item.title}}</div>
+                <div class="fs-4 fw-bold text-center text-black">{{item.title}}<br></div>
             </div>
             <div class="col-1 text-center text-black">
                 {{item.quantity}}
             </div>
             <div class="col-3 fs-4 fw-bold text-center text-black">
-                {{item.price}}
+                {{item.price | currency : "INR" : "symbol" : "3.0"}}
             </div>
         </div>
         <hr class="border-3">
     </div>
-
-</div> -->
+</div>
+<!-- 
 <div class="container">
     <h1>
         Your bag total is {{ totalPrice(cart) | currency : "INR" : "symbol" : "3.0" }}
@@ -79,4 +79,4 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
