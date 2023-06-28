@@ -5,11 +5,12 @@ import { SchoolComponent } from './school/school.component';
 import { EnterprisesComponent } from './enterprises/enterprises.component';
 import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 import { NotesComponent } from './notes/notes.component';
-import { SettingComponent } from './setting/setting.component';
 import { CollegeComponent } from './college/college.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ProductsComponent } from './products/products.component';
 import { ViewProductComponent } from './products/view-product/view-product.component';
+import { CartdetailsComponent } from './cartdetails/cartdetails.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -20,11 +21,10 @@ const routes: Routes = [
   { path: 'enterprises', component: EnterprisesComponent },
   { path: 'notes', component: NotesComponent },
   { path: 'airen', component: AirenMaskComponent },
-  { path: 'setting', component: SettingComponent},
   {path:'college',component:CollegeComponent},
   {path:'sign_in',component:SignInComponent},
   {path:"viewProduct/:id",component:ViewProductComponent},
-  
+  {path:"cart_details",component:CartdetailsComponent}
 ];
 
 @NgModule({

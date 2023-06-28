@@ -16,7 +16,7 @@
 }
 
 .setting-dropdown {
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
     position: absolute;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(4, 1, 49) 100%);
@@ -36,4 +36,16 @@ ul {
 
 .dropdown:hover {
     color: white;
+}
+
+.badge-cart {
+    position: relative;
+    bottom: 12px;
+    left: 3px;
+    padding: 4px 6px;
+    background: #978F8F;
+}
+
+.badge-cart:hover {
+    background-color: black;
 }

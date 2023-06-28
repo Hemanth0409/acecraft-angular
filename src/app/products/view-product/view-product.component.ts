@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { ProductService } from 'src/services/product.service';
 @Component({
   selector: 'app-view-product',
@@ -11,7 +11,6 @@ export class ViewProductComponent implements OnInit{
 
   constructor(
     private productService: ProductService,
-    private router: Router,
     private actRoute: ActivatedRoute
   ) {}
 
@@ -20,7 +19,6 @@ export class ViewProductComponent implements OnInit{
 
 
   ngOnInit() {
-    //this.productId = 1
     this.productId = this.actRoute.snapshot.params['id'];
 
     this.productService

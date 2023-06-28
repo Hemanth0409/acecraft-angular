@@ -11,7 +11,6 @@ import { FooterComponent } from './footer/footer.component';
 import { EnterprisesComponent } from './enterprises/enterprises.component';
 import { NotesComponent } from './notes/notes.component';
 import { AirenMaskComponent } from './airen-mask/airen-mask.component';
-import { SettingComponent } from './setting/setting.component';
 import { CollegeComponent } from './college/college.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { CardModule } from 'primeng/card';
@@ -22,7 +21,8 @@ import { ViewProductComponent } from './products/view-product/view-product.compo
 import { SingleProductComponent } from './products/single-product/single-product.component';
 import { ProductsortPipe } from './productsort.pipe';
 import { SortPipe } from './sort.pipe';
-
+import { CartdetailsComponent } from './cartdetails/cartdetails.component';
+import { StyleClassModule } from 'primeng/styleclass';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,6 @@ import { SortPipe } from './sort.pipe';
     EnterprisesComponent,
     NotesComponent,
     AirenMaskComponent,
-    SettingComponent,
     CollegeComponent,
     SignInComponent,
     ProductsComponent,
@@ -41,12 +40,13 @@ import { SortPipe } from './sort.pipe';
     SingleProductComponent,
     ProductsortPipe,
     SortPipe,
+    CartdetailsComponent,
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BadgeModule,HttpClientModule,CardModule,ButtonModule,ReactiveFormsModule
+    BadgeModule,HttpClientModule,CardModule,ButtonModule,ReactiveFormsModule,StyleClassModule
   ],
   providers: [],
   bootstrap: [AppComponent]
