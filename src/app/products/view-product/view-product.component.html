@@ -82,12 +82,12 @@
                   >Quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
                 >
               </label>
-                            <input type="number" class="quantity" />
+                            <input type="number" class="quantity" [(ngModel)]="quantity" min="1" max="25" />
                         </div>
                         <br />
                         <div class="button">
-                            <button class="btn btn-dark m-3">Add to Cart</button>
-                            <button class="btn btn-dark m-0">Buy Now</button>
+                            <button class="px-3 btn-dark m-3 bg-black py-2 text-white" (click)="addToCart(item)">Add to Cart</button>
+                            <button class="btn-dark m-0 bg-black px-3 py-2 text-white">Buy Now</button>
                         </div>
                     </div>
                 </div>

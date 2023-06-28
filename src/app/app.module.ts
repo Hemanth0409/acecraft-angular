@@ -23,6 +23,7 @@ import { ProductsortPipe } from './productsort.pipe';
 import { SortPipe } from './sort.pipe';
 import { CartdetailsComponent } from './cartdetails/cartdetails.component';
 import { StyleClassModule } from 'primeng/styleclass';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,7 @@ import { StyleClassModule } from 'primeng/styleclass';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BadgeModule,HttpClientModule,CardModule,ButtonModule,ReactiveFormsModule,StyleClassModule
+    BadgeModule,HttpClientModule,CardModule,ButtonModule,ReactiveFormsModule,StyleClassModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

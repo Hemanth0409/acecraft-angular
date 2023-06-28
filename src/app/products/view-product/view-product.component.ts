@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { ProductService } from 'src/services/product.service';
+import { Cartlist } from 'src/models/cartlist';
+import Swal from 'sweetalert2';
+import { CartService } from 'src/services/cart.service';
 @Component({
   selector: 'app-view-product',
   templateUrl: './view-product.component.html',
@@ -9,15 +12,49 @@ import { ProductService } from 'src/services/product.service';
 export class ViewProductComponent implements OnInit{
   productId!: number;
 
+
   constructor(
     private productService: ProductService,
-    private actRoute: ActivatedRoute
+    private actRoute: ActivatedRoute,
+    private cartsvc:CartService
   ) {}
 
 
   productData: any[]=[];
+cart:Cartlist={
+  id: 0,
+   title: '',
+  productCode: '',
+  brand: '',
+  soldBy: '',
+  price: 0,
+  originalPrice: 0,
+  offerPercent: 0,
+  gender: '',
+  size: [],
+  description: [],
+  imgSrc: ''
+}
+quantity:number=1;
+addToCart(item:any){
+  this.cart.title=item.title;
+  this.cart.originalPrice=item.originalPrice;
+  this.cartsvc.addToCart(this.cart);
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+  })
 
+  Toast.fire({
+    icon: 'success',
+    title: 'Item added successfully'
+  })
+  this.cartsvc.getCount();
 
+}
   ngOnInit() {
     this.productId = this.actRoute.snapshot.params['id'];
 
