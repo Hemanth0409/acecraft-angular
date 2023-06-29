@@ -9,7 +9,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./cartdetails.component.css']
 })
 export class CartdetailsComponent implements OnInit{
+  item: boolean =true;
   constructor(private cartSvc: CartService, private router:Router) { }
+
   carts:Cartlist={
     id: 0,
     title: '',
@@ -78,8 +80,11 @@ export class CartdetailsComponent implements OnInit{
   onClick(){
     this.router.navigate(['/products'])
   }
-  
-
+  productId!: number;
+  viewProduct(id: number) {
+    this.productId = id;
+    this.router.navigate(['viewProduct/' + id]);
+  }
   ngOnInit(): void {
     this.cartSvc.getCartItem().subscribe((res)=>{this.cart=res;})
   }

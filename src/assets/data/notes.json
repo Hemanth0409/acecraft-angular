@@ -762,5 +762,23 @@
       ]
     }
   ],
-  "cart_list": []
+  "cart_list": [
+    {
+      "id": 6,
+      "title": "NHG Shorts",
+      "productCode": "NHBSH1220",
+      "brand": "ACECRAFT",
+      "soldBy": "Alchemy",
+      "price": 385,
+      "originalPrice": 580,
+      "offerPercent": 34,
+      "gender": "",
+      "size": 26,
+      "description": [
+        "Twill Texture Formal Shorts.Poly-Viscose Fabric."
+      ],
+      "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f01491c2e5ab32f3385f/images/5aa0f01491c2e5ab32f33860/5aa0f01d91c2e5ab32f33897/webp/5aa0f01d91c2e5ab32f33897-640x640.jpg",
+      "quantity": 1
+    }
+  ]
 }

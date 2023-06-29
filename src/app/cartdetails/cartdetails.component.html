@@ -1,13 +1,12 @@
-<div class="container-fluid">
+<div class="container">
     <div class="row justify-content-center fs-1 mt-5">
         Your bag total is {{ totalPrice(cart) | currency : "INR" : "symbol" : "3.0" }}
     </div>
     <hr class="border-3">
     <div class="container" *ngFor="let item of cart">
-
         <div class="row">
             <div class="col-3">
-                <img [src]="item.imgSrc" alt="" width="350px" height="350px">
+                <img [src]="item.imgSrc" (click)="viewProduct(item.id)" alt="" width="350px" height="350px" style="cursor: pointer;">
             </div>
             <div class="col-5">
                 <div class="fs-4  fw-bold  text-center text-black">{{item.title}}<br><span class="fw-normal fs-5">Size:{{item.size}}</span></div>
@@ -22,7 +21,35 @@
         </div>
         <hr class=" border-3">
     </div>
+    <div class="row pb-3">
+        <div class="col-5">
+            <label class="fs-5">Enter Coupon Code here:</label><br>
+            <input type="text" class="mt-2 mb-3" style="width: 300px;">
+            <span type="button" class="border border-2 px-2 fs-6 border-black">Apply!</span>
+        </div>
+        <div class="col-2 pt-4">
+            <p class="fs-5 fw-bold text-secondary">Sub Total </p>
+            <p class="fs-4 fw-bold text-black mt-4">Total</p>
+        </div>
+        <div class="col-5 pt-4">
+
+            <p class="text-end fs-5 fw-bold  text-secondary">{{ totalPrice(cart) | currency : "INR" : "symbol" : "3.0" }}</p>
+            <p class="text-end fs-4 fw-bold mb-0 text-black">{{ totalPrice(cart) | currency : "INR" : "symbol" : "3.0" }}
+            </p>
+
+            <div class="row mt-2">
+                <span>
+                    <span><button type="button" class="ms-3 float-end border-1 border-black py-1">Place
+                            Order</button></span>
+                <span><button type="button" class="float-end border-1 border-black py-1" routerLink="/">Continue
+                            Shopping</button></span>
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="container">
-    <span>Your shopping cart is Empty!</span>
+<div class="container" style="height: 29em;margin-top: 30px;">
+    <span class="fs-4">Your shopping cart is Empty!</span><br>
+    <button type="button" class="border-1 border-black py-1 mt-4" routerLink="/">Continue
+        Shopping</button>
 </div>
