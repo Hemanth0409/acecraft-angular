@@ -42,16 +42,20 @@ export class CartdetailsComponent implements OnInit{
     this.cartSvc.updateCart(item)
   } 
    onDecrement(item:Cartlist){
-  if(item.quantity==1){
-   Swal.fire ({
-      title: "Whether you want to remove the product",
-      icon: "warning",
-    }).then(() => {
+    if(item.quantity==1){
       this.delete(item)
+   Swal.fire ({
+      title: "Your product has been removed",
+      icon: "warning",
+      
+    }).then(() => { 
+    
       this.router.navigate (['/cart_details']);
   })}
-    
-    return item.quantity--
+    item.quantity--; 
+    this.cartSvc.updateCart(item)
+
+   
   }
   delete(deleteItem:Cartlist){
   
