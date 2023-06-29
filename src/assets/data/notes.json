@@ -762,32 +762,5 @@
       ]
     }
   ],
-  "cart_list": [
-    {
-      "id": 1,
-      "title": "CIS Royal Day Wear (Grade 1-5)",
-      "productCode": "",
-      "brand": "",
-      "soldBy": "",
-      "price": 450,
-      "originalPrice": 750,
-      "offerPercent": 0,
-      "gender": "",
-      "size": [
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40
-      ],
-      "description": [],
-      "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d6e74cbfb666ae1145869/webp/elementary-school-480x480.jpg"
-    }
-  ]
+  "cart_list": []
 }

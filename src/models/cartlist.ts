@@ -8,7 +8,7 @@ export interface Cartlist {
     originalPrice: number;
     offerPercent: number;
     gender: string;
-    size: number[];
+    size: any;
     description: string[];
     imgSrc: string;
     totalprice:number;

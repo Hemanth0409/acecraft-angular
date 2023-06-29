@@ -31,22 +31,29 @@ cart:Cartlist={
   originalPrice: 0,
   offerPercent: 0,
   gender: '',
-  size: [],
+  size:1,
   description: [],
   imgSrc: '',
   totalprice: 0,
   quantity: 0
 }
 quantity:number=1;
+size:number | string | undefined;
 addToCart(item:any){
   this.cart.id=item.id;
   this.cart.title=item.title;
+  this.cart.productCode=item.productCode;
+  this.cart.brand=item.brand;
+  this.cart.soldBy=item.soldBy;
   this.cart.originalPrice=item.originalPrice;
   this.cart.price=item.price;
+  this.cart.offerPercent=item.offerPercent;
+  this.cart.gender=item.gender;
   this.cart.imgSrc=item.imgSrc;
-  this.cart.quantity=item.quantity;
+  this.cart.quantity=this.quantity;
+  this.cart.description=item.description;
   this.cart.totalprice=item.totalprice;
-  this.cart.size=item.size;
+  this.cart.size=this.cart.size;
   
   this.cartsvc.addToCart(this.cart);
   const Toast = Swal.mixin({

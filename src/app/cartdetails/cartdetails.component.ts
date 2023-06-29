@@ -14,7 +14,7 @@ export class CartdetailsComponent implements OnInit{
     id: 0,
     title: '',
     price: 0,
-    size: [],
+    size:'',
     imgSrc: '',
     quantity: 1,
     productCode: '',
