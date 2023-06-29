@@ -9,7 +9,7 @@ export class CartService {
 
 
   url:string='';
-  cartUrl=' http://localhost:3000/cart_list'
+  cartUrl='http://localhost:3000/cart_list'
     constructor(private http:HttpClient) { 
       this.url=this.cartUrl+'/'
     }

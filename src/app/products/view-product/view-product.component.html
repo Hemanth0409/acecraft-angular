@@ -43,12 +43,11 @@
                 <option disabled class="ng-binding" selected="selected">
                   Please Select
                 </option>
-                <option *ngFor="let s of item.size"  value="1" required >
+                <option *ngFor="let s of item.size"  value="{{s}}" >
                   {{ s }}
                 </option>
               </select>
                         </div>
-
                         <hr />
                         <div>
                             <label class="option-name" style="position: relative; top: 0px !important">
@@ -63,7 +62,7 @@
                             <button class="px-3 btn-dark m-3 bg-black py-2 text-white" (click)="addToCart(item)">
                 Add to Cart
               </button>
-                            <button class="btn-dark m-0 bg-black px-3 py-2 text-white" routerLink="/cart_details">
+                            <button class="btn-dark m-0 bg-black px-3 py-2 text-white" (click)="addToCart(item)" routerLink="/cart_details">
                 Buy Now
               </button>
                         </div>
