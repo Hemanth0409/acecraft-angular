@@ -13,7 +13,7 @@
                 <div class="fs-4  fw-bold  text-center text-black">{{item.title}}<br><span class="fw-normal fs-5">Size:{{item.size}}</span></div>
             </div>
             <div class="col-1 mt-2 text-center fw-bold text-black">
-                <span class="me-2 quantity">-</span> <span class="border border-1 px-2">{{item.quantity}}</span> <span class="ms-1 quantity">+</span>
+                <span class="me-2 quantity" (click)="onDecrement(item)">-</span> <span class="border border-1 px-2">{{item.quantity}}</span> <span class="ms-1 quantity" (click)=" onIncerment(item)">+</span>
             </div>
             <div class="col-3 fs-4 fst-normal text-center text-black">
                 {{item.price*item.quantity | currency : "INR" : "symbol" : "3.0"}}<br>

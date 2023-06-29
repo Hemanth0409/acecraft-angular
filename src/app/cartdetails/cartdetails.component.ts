@@ -37,8 +37,24 @@ export class CartdetailsComponent implements OnInit{
   return total;
   }
   cart:Cartlist[]=[]
-
+  onIncerment(item:Cartlist){
+    item.quantity++;
+    this.cartSvc.updateCart(item)
+  } 
+   onDecrement(item:Cartlist){
+  if(item.quantity==1){
+   Swal.fire ({
+      title: "Whether you want to remove the product",
+      icon: "warning",
+    }).then(() => {
+      this.delete(item)
+      this.router.navigate (['/cart_details']);
+  })}
+    
+    return item.quantity--
+  }
   delete(deleteItem:Cartlist){
+  
     this.cartSvc.removeCartItem(deleteItem).subscribe()
     const Toast = Swal.mixin({
       toast: true,
@@ -53,10 +69,13 @@ export class CartdetailsComponent implements OnInit{
       title: 'Item deleted successfully'
     })
     this.ngOnInit();
+    this.cartSvc.getCount();
   }
   onClick(){
     this.router.navigate(['/products'])
   }
+  
+
   ngOnInit(): void {
     this.cartSvc.getCartItem().subscribe((res)=>{this.cart=res;})
   }

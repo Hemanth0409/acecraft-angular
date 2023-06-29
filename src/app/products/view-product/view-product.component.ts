@@ -35,7 +35,7 @@ cart:Cartlist={
   description: [],
   imgSrc: '',
   totalprice: 0,
-  quantity: 0
+  quantity: 1
 }
 quantity:number=1;
 size:number | string | undefined;
@@ -50,7 +50,7 @@ addToCart(item:any){
   this.cart.offerPercent=item.offerPercent;
   this.cart.gender=item.gender;
   this.cart.imgSrc=item.imgSrc;
-  this.cart.quantity=this.quantity;
+  this.cart.quantity=this.cart.quantity;
   this.cart.description=item.description;
   this.cart.totalprice=item.totalprice;
   this.cart.size=this.cart.size;

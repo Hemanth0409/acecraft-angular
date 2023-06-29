@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { Cartlist } from 'src/models/cartlist';
+import Swal from 'sweetalert2';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,9 +15,29 @@ export class CartService {
       this.url=this.cartUrl+'/'
     }
   addToCart(product:Cartlist){
+    
     this.http.post<Cartlist[]>(this.cartUrl,product).subscribe((data)=>{
       console.log(data)
     })
+  }
+
+  updateCart(product:Cartlist){
+    let updateUrl=this.cartUrl+'/'+product.id
+    this.http.put<Cartlist[]>(updateUrl,product).subscribe(()=>{
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+    })
+  
+    Toast.fire({
+      icon: 'success',
+      title: 'Item updated successfully'
+    })
+  }
+  )
   }
     getCartItem(){
       return this.http.get<Cartlist[]>(this.cartUrl);
