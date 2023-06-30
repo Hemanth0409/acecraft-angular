@@ -27,12 +27,10 @@ export class RegisterComponent {
       Validators.maxLength(16)
     ]);
     this.Lname = new FormControl('', [
-      Validators.required,
-      Validators.minLength(1),
-      Validators.maxLength(16)]);
+      Validators.required]);
     this.Email = new FormControl('', [
       Validators.required,
-      Validators.minLength(1),
+
       Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]);
 
     this.Password = new FormControl('', [
@@ -51,8 +49,6 @@ export class RegisterComponent {
     ]);
     this.DealershipNum = new FormControl('', [
       Validators.required,
-      Validators.minLength(8),
-      Validators.maxLength(8),
       Validators.pattern('/^-?(0|[1-9]\d*)?$/')
     ]);
     this.City = new FormControl('', [
@@ -61,9 +57,7 @@ export class RegisterComponent {
     this.State = new FormControl('', [
       Validators.required
     ]);
-    this.GSTNum = new FormControl('', [
-      Validators.required,
-    ]);
+   
 
 
     this.react_formRes = new FormGroup({
@@ -71,12 +65,13 @@ export class RegisterComponent {
       Lname:this.Lname,
       Email:this.Email,
       Password: this.Password,
-      cpassword:this.cPassword,
+      cPassword:this.cPassword,
       Radiobtn:this.Radiobtn,
       Dealership:this.Dealership,
       DealershipNum:this.DealershipNum,
+      City:this.City,  
       State:this.State,
-      GSTNum:this.GSTNum
+
     });
   }
   onSubmit(form: any) {

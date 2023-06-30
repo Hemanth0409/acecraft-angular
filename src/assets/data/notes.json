@@ -762,27 +762,5 @@
       ]
     }
   ],
-  "cart_list": [
-    {
-      "id": 2,
-      "title": "NHG Shirt (Boys)",
-      "productCode": "NHBSHRT20",
-      "brand": "ACECRAFT",
-      "soldBy": "Alchemy",
-      "price": 355,
-      "originalPrice": 535,
-      "offerPercent": 34,
-      "gender": "",
-      "size": 26,
-      "description": [
-        "Made from a fine blend of Cotton and Polyester yarn.",
-        "Spread collar.",
-        "Button fastening.",
-        "Short sleeves.",
-        "Straight hem."
-      ],
-      "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f5c6f04705ab2ca345c6/images/5aa0f5c6f04705ab2ca345c7/5aa0f5d0f04705ab2ca345f9/webp/5aa0f5d0f04705ab2ca345f9-480x480.jpg",
-      "quantity": 6
-    }
-  ]
+  "cart_list": []
 }
