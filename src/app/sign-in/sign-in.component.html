@@ -1,39 +1,52 @@
-<form [formGroup]="react_form" (ngsubmit)="onSubmit(react_form)">
-    <div class="form-group">
-        <div class="text-center">
-            <h3>Login with ACECRAFT </h3>
-        </div>
-        <div>
-            <label>Username:</label> <input type="text" class="form-control" placeholder="Enter your username" formControlName="username" [ngClass]="{'is-invalid':username.errors &&
-    (username.touched || username.dirty),'is-valid': username.valid}" required/>
+<body>
+    <div class="container border border-1 mt-5 mb-4">
+        <div class="row justify-content-center mt-5 mb-4">
+            <div class="col-4 shadow-lg">
+                <form [formGroup]="react_form" (ngsubmit)="onSubmit(react_form)">
+                    <div class="form-group">
+                        <div class="text-center ">
+                            <p class="fs-2 mt-5">Login with ACECRAFT </p>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control mt-3" placeholder="Username" formControlName="username" [ngClass]="{'is-invalid':username.errors &&
+                (username.touched || username.dirty),'is-valid': username.valid}" />
 
-            <div class="invalid-feedback">
+                            <div class="invalid-feedback text-center fs-6 fst-normal text-danger">
 
-                <strong *ngIf="username.errors?.required">Username is required</strong>
-                <strong *ngIf="username.errors?.minlength">Username length must be greater than
-            {{ username.errors?.minlength.requiredLength }} characters.
-            {{username.errors?.minlength.requiredLength -username.errors?.minlength.actualLength}}more characters required.
-        </strong>
-                <strong *ngIf="username.errors?.maxlength">Username length must be less than 17 characters
-        </strong>
+                                <strong *ngIf="username.errors?.required">Enter a valid username</strong>
+                                <strong *ngIf="username.errors?.minlength">Username length must be greater than
+                        {{ username.errors?.minlength.requiredLength }} characters.
+                        {{username.errors?.minlength.requiredLength -username.errors?.minlength.actualLength}}more characters required.
+                    </strong>
+                                <strong *ngIf="username.errors?.maxlength">Username length must be less than 17 characters
+                    </strong>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="text-center fs-6 fst-normal text-danger">
+                            <input type="password" class="form-control" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid':password.errors &&
+                    (password.touched || password.dirty),'is-valid': password.valid}" required/>
+                            <div class="invalid-feedback">
+                                <strong *ngIf="password.errors?.required">Required Field</strong>
+                                <strong *ngIf="password.errors?.pattern">Password pattern:1 Uppercase,1 Spl character,1 Numeric value</strong>
+                                <strong *ngIf="password.errors?.minlength">password length must be greater than
+                            {{ password.errors?.minlength.requiredLength }} characters.
+                            {{password.errors?.minlength.requiredLength -password.errors?.minlength.actualLength}}more characters required.
+                        </strong>
+                                <strong *ngIf="password.errors?.maxlength">password length must be less than 17 characters{{password.errors?.maxlength.actualLength -password.errors?.maxlength.requiredLength}}more than 17 characters.
+                        </strong>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="mb-3 col-12 bg-black text-white" (click)="onSubmit(react_form)">LogIn</button>
+
+                        <div class="text-center ">
+                            <p class="fs-6">Forget Password?</p>
+                        </div>
+                    </div>
+
+                </form>
             </div>
         </div>
-        <br>
-        <div>
-            <label for="password">password:</label> <input type="password" class="form-control" placeholder="Enter your password" formControlName="password" [ngClass]="{'is-invalid':password.errors &&
-        (password.touched || password.dirty),'is-valid': password.valid}" required/>
-            <div class="invalid-feedback">
-                <strong *ngIf="password.errors?.required">password required</strong>
-                <strong *ngIf="password.errors?.minlength">password length must be greater than
-                {{ password.errors?.minlength.requiredLength }} characters.
-                {{password.errors?.minlength.requiredLength -password.errors?.minlength.actualLength}}more characters required.
-            </strong>
-                <strong *ngIf="password.errors?.maxlength">password length must be less than 17 characters{{password.errors?.maxlength.actualLength -password.errors?.maxlength.requiredLength}}more than 17 characters.
-            </strong>
-            </div>
-        </div>
-        <br>
-        <button class="btn btn-success mb-3" (click)="onSubmit(react_form)">Submit</button>
     </div>
-
-</form>
+</body>

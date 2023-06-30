@@ -71,8 +71,8 @@ export class CartdetailsComponent implements OnInit{
     })
 
     Toast.fire({
-      icon: 'error',
-      title: 'Item deleted successfully'
+      icon: 'success',
+      title: 'Product has been removed successfully'
     })
     this.ngOnInit();
     this.cartSvc.getCount();

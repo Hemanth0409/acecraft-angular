@@ -24,6 +24,7 @@ import { SortPipe } from './sort.pipe';
 import { CartdetailsComponent } from './cartdetails/cartdetails.component';
 import { StyleClassModule } from 'primeng/styleclass';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { FormsModule } from '@angular/forms';
     ProductsortPipe,
     SortPipe,
     CartdetailsComponent,
+    RegisterComponent,
   
   ],
   imports: [

@@ -16,13 +16,12 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {
     this.username = new FormControl('', [
       Validators.required,
-      Validators.minLength(10),
+      Validators.minLength(3),
       Validators.maxLength(16)
     ]);
     this.password = new FormControl('', [
       Validators.required,
-      Validators.minLength(8),
-      Validators.maxLength(16)
+      Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')
     
   ])
     this.react_form = new FormGroup({

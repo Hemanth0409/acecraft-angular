@@ -1,0 +1,146 @@
+<body>
+    <div class="container border border-1 mt-5 mb-4">
+        <div class="row justify-content-center mt-5 mb-4">
+            <div class="col-4 shadow-lg">
+                <form [formGroup]="react_formRes" (ngsubmit)="onSubmit(react_formRes)">
+                    <div class="form-group">
+                        <div class="text-center ">
+                            <p class="fs-2 mt-4">Signup with ACECRAFT </p>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control mt-2" placeholder="First Name" formControlName="Fname" [ngClass]="{'is-invalid':Fname.errors &&
+                (Fname.touched || Fname.dirty),'is-valid': Fname.valid}" />
+
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
+
+                                <h6 *ngIf="Fname.errors?.required">Required field</h6>
+                                <h6 *ngIf="Fname.errors?.minlength">Fname length must be greater than {{ Fname.errors?.minlength.requiredLength }} characters. {{Fname.errors?.minlength.requiredLength -Fname.errors?.minlength.actualLength}}more characters required.
+                                </h6>
+                                <h6 *ngIf="Fname.errors?.maxlength">Fname length must be less than 17 characters
+                                </h6>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" class="form-control" placeholder="Last Name" formControlName="Lname" [ngClass]="{'is-invalid':Lname.errors &&
+                (Lname.touched || Lname.dirty),'is-valid': Lname.valid}" />
+
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
+
+                                <h6 *ngIf="Lname.errors?.required">Required field</h6>
+                                <h6 *ngIf="Lname.errors?.minlength">Lname length must be greater than {{ Lname.errors?.minlength.requiredLength }} characters. {{Lname.errors?.minlength.requiredLength -Lname.errors?.minlength.actualLength}}more characters required.
+                                </h6>
+                                <h6 *ngIf="Lname.errors?.maxlength">Lname length must be less than 17 characters
+                                </h6>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" class="form-control " placeholder="Email" formControlName="Email" [ngClass]="{'is-invalid':Email.errors &&
+                (Email.touched || Email.dirty),'is-valid': Email.valid}" />
+
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
+
+                                <h6 *ngIf="Email.errors?.required">Required field</h6>
+                                <h6 *ngIf="Email.errors?.minlength">Email length must be greater than {{ Email.errors?.minlength.requiredLength }} characters. {{Email.errors?.minlength.requiredLength -Email.errors?.minlength.actualLength}}more characters required.
+                                </h6>
+                                <h6 *ngIf="Email.errors?.maxlength">Email length must be less than 17 characters
+                                </h6>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="text-start fs-6 fst-normal text-danger">
+                            <input type="Password" class="form-control" placeholder="Password" formControlName="Password" [ngClass]="{'is-invalid':Password.errors &&
+                    (Password.touched || Password.dirty),'is-valid': Password.valid}" required />
+                            <div class="invalid-feedback">
+                                <h6 *ngIf="Password.errors?.required">Required Field</h6>
+                                <h6 *ngIf="Password.errors?.minlength">Password length must be greater than {{ Password.errors?.minlength.requiredLength }} characters. {{Password.errors?.minlength.requiredLength -Password.errors?.minlength.actualLength}}more characters required.
+                                </h6>
+                                <h6 *ngIf="Password.errors?.maxlength">Password length must be less than 17 characters{{Password.errors?.maxlength.actualLength -Password.errors?.maxlength.requiredLength}}more than 17 characters.
+                                </h6>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div>
+                            <input type="text" class="form-control " placeholder="Confirm Password" formControlName="cPassword" [ngClass]="{'is-invalid':cPassword.errors &&
+                (cPassword.touched || cPassword.dirty),'is-valid': cPassword.valid}" />
+
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
+
+                                <h6 *ngIf="cPassword.errors?.required">Required field</h6>
+                                <h6 *ngIf="cPassword.errors?.minlength">cPassword length must be greater than {{ cPassword.errors?.minlength.requiredLength }} characters. {{cPassword.errors?.minlength.requiredLength -cPassword.errors?.minlength.actualLength}}more characters required.
+                                </h6>
+                                <h6 *ngIf="cPassword.errors?.maxlength">cPassword length must be less than 17 characters
+                                </h6>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" class="form-control " placeholder="Dealership Name" formControlName="Dealership" [ngClass]="{'is-invalid':Dealership.errors &&
+                (Dealership.touched || Dealership.dirty),'is-valid': Dealership.valid}" />
+
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
+
+                                <h6 *ngIf="Dealership.errors?.required">Required field</h6>
+                                <h6 *ngIf="Dealership.errors?.minlength">Dealership length must be greater than {{ Dealership.errors?.minlength.requiredLength }} characters. {{Dealership.errors?.minlength.requiredLength -Dealership.errors?.minlength.actualLength}}more characters required.
+                                </h6>
+                                <h6 *ngIf="Dealership.errors?.maxlength">Dealership length must be less than 17 characters
+                                </h6>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" class="form-control " placeholder="Dealership Number/Code" formControlName="DealershipNum" [ngClass]="{'is-invalid':DealershipNum.errors &&
+                (DealershipNum.touched || DealershipNum.dirty),'is-valid': DealershipNum.valid}" />
+
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
+
+                                <h6 *ngIf="DealershipNum.errors?.required">Required field</h6>
+                                <h6 *ngIf="DealershipNum.errors?.minlength">DealershipNum length must be greater than {{ DealershipNum.errors?.minlength.requiredLength }} characters. {{DealershipNum.errors?.minlength.requiredLength -DealershipNum.errors?.minlength.actualLength}}more characters
+                                    required.
+                                </h6>
+                                <h6 *ngIf="DealershipNum.errors?.maxlength">DealershipNum length must be less than 17 characters
+                                </h6>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" class="form-control " placeholder="City" formControlName="City" [ngClass]="{'is-invalid':City.errors &&
+                (City.touched || City.dirty),'is-valid': City.valid}" />
+
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
+
+                                <h6 *ngIf="City.errors?.required">Required field</h6>
+                                <h6 *ngIf="City.errors?.minlength">City length must be greater than {{ City.errors?.minlength.requiredLength }} characters. {{City.errors?.minlength.requiredLength -City.errors?.minlength.actualLength}}more characters required.
+                                </h6>
+                                <h6 *ngIf="City.errors?.maxlength">City length must be less than 17 characters
+                                </h6>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" class="form-control " placeholder="GST Number" formControlName="GSTNum" [ngClass]="{'is-invalid':GSTNum.errors &&
+                (GSTNum.touched || GSTNum.dirty),'is-valid': GSTNum.valid}" />
+
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
+
+                                <h6 *ngIf="GSTNum.errors?.required">Required field</h6>
+                                <h6 *ngIf="GSTNum.errors?.minlength">GSTNum length must be greater than {{ GSTNum.errors?.minlength.requiredLength }} characters. {{GSTNum.errors?.minlength.requiredLength -GSTNum.errors?.minlength.actualLength}}more characters required.
+                                </h6>
+                                <h6 *ngIf="GSTNum.errors?.maxlength">GSTNum length must be less than 17 characters
+                                </h6>
+                            </div>
+                        </div>
+                        <br>
+
+                        <button type="submit" class="mb-3 col-12 bg-black text-white" (click)="onSubmit(react_formRes)">LogIn</button>
+
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

@@ -2,7 +2,7 @@
     <div class="row justify-content-center fs-1 mt-5" [hidden]="!isHidden">
         Your bag total is {{ totalPrice(cart) | currency : "INR" : "symbol" : "3.0" }}
     </div>
-    <hr class="border-3">
+    <hr class="border-3" [hidden]="!isHidden">
     <div class="container" *ngFor="let item of cart">
         <div class="row">
             <div class="col-3">

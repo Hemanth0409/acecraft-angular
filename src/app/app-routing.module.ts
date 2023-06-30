@@ -10,7 +10,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { ProductsComponent } from './products/products.component';
 import { ViewProductComponent } from './products/view-product/view-product.component';
 import { CartdetailsComponent } from './cartdetails/cartdetails.component';
-
+import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   {
     path: '',
@@ -24,7 +24,8 @@ const routes: Routes = [
   {path:'college',component:CollegeComponent},
   {path:'sign_in',component:SignInComponent},
   {path:"viewProduct/:id",component:ViewProductComponent},
-  {path:"cart_details",component:CartdetailsComponent}
+  {path:"cart_details",component:CartdetailsComponent},
+  {path:"register",component:RegisterComponent}
 ];
 
 @NgModule({
