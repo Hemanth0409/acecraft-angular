@@ -84,9 +84,25 @@ export class CartdetailsComponent implements OnInit{
   viewProduct(id: number) {
     this.productId = id;
     this.router.navigate(['viewProduct/' + id]);
-  }
+  
+}
+display:any=[]
+
+isHidden:boolean=true
+  none='block'
   ngOnInit(): void {
     this.cartSvc.getCartItem().subscribe((res)=>{this.cart=res;})
+    this.cartSvc.getCartItem().subscribe(
+      (response)=>{
+        this.display=response;
+       if(this.display==0){
+        this.isHidden=false//for hiding the default message
+        this.none="none"
+        console.log(this.isHidden);
+       }
+        console.log(this.display);
+      }
+    )
   }
 
 }

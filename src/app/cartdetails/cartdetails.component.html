@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row justify-content-center fs-1 mt-5">
+    <div class="row justify-content-center fs-1 mt-5" [hidden]="!isHidden">
         Your bag total is {{ totalPrice(cart) | currency : "INR" : "symbol" : "3.0" }}
     </div>
     <hr class="border-3">
@@ -21,8 +21,9 @@
         </div>
         <hr class=" border-3">
     </div>
-    <div class="row pb-3">
+    <div class="row pb-3" [hidden]="!isHidden">
         <div class="col-5">
+
             <label class="fs-5">Enter Coupon Code here:</label><br>
             <input type="text" class="mt-2 mb-3" style="width: 300px;">
             <span type="button" class="border border-2 px-2 fs-6 border-black">Apply!</span>
@@ -48,8 +49,11 @@
         </div>
     </div>
 </div>
-<div class="container" style="height: 29em;margin-top: 30px;">
-    <span class="fs-4">Your shopping cart is Empty!</span><br>
-    <button type="button" class="border-1 border-black py-1 mt-4" routerLink="/">Continue
-        Shopping</button>
+<div [style.min-height]="isHidden? '0':'60vh'" [style.display]="isHidden? 'none':'block'" class="container">
+
+    <div class="row mt-5">
+        <h4 [style.display]="isHidden? 'none':'block'">Your Shopping cart is empty!</h4>
+
+        <button [style.display]="isHidden? 'none':'block'" class="col-2 mt-3 text-center" id="continueshopping" routerLink=""><p>Continue Shopping</p></button>
+    </div>
 </div>
