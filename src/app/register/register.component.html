@@ -77,8 +77,10 @@
                         </div>
                         <br>
                         <div class="text-center justify-content-between mb-2">
-                            <input type="radio" value="school" name="Radiobtn" class="me-1 " [ngClass]="{'is-invalid':Radiobtn.errors &&   (Radiobtn.touched || Radiobtn.dirty),'is-valid': Radiobtn.valid}"><label for="school" class="fs-6">School</label>
-                            <input type="radio" value="enterprises" class="ms-5 me-1" name="Radiobtn" [ngClass]="{'is-invalid':Radiobtn.errors &&   (Radiobtn.touched || Radiobtn.dirty),'is-valid': Radiobtn.valid}"><label for="enterprises" class="fs-6">Enterprises</label>
+                            <input type="radio" value="school" name="Radiobtn" class="me-1 " formControlName="Radiobtn" [ngClass]="{'is-invalid':Radiobtn.errors &&   (Radiobtn.touched || Radiobtn.dirty),'is-valid': Radiobtn.valid}"><label for="school"
+                                class="fs-6">School</label>
+                            <input type="radio" value="enterprises" class="ms-5 me-1" name="Radiobtn" formControlName="Radiobtn" [ngClass]="{'is-invalid':Radiobtn.errors &&   (Radiobtn.touched || Radiobtn.dirty),'is-valid': Radiobtn.valid}"><label for="enterprises"
+                                class="fs-6">Enterprises</label>
                             <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
 
                                 <h6 *ngIf="Radiobtn.errors?.required">Required field</h6>
@@ -103,35 +105,75 @@
                             <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
 
                                 <h6 *ngIf="DealershipNum.errors?.required">Required field</h6>
-                                <h6 *ngIf="DealershipNum.errors?.pattern">Should Contain Only Number</h6>
-
+                                <h6 *ngIf="DealershipNum.errors?.pattern">dsfkbj</h6>
                             </div>
                         </div>
                         <br>
                         <div>
-                            <input type="text " class="form-control " placeholder="City " formControlName="City" [ngClass]="{'is-invalid':City.errors && (City.touched || City.dirty), 'is-valid': City.valid}" />
+                            <input type=" text " class="form-control " placeholder="City " formControlName="City " [ngClass]="{ 'is-invalid':City.errors && (City.touched || City.dirty), 'is-valid': City.valid} " />
 
                             <div class="invalid-feedback text-start fs-6 fst-normal text-danger ">
 
-                                <h6 *ngIf="City.errors?.required">Required field</h6>
+                                <h6 *ngIf="City.errors?.required ">Required field</h6>
 
                             </div>
                         </div>
                         <br>
+                        <div class="form-group">
+                            <label for="State">State</label>
+                            <select class="form-control" name="State" id="State" formControlName="State">            
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Puducherry">Puducherry</option>
+                              </select>
+                        </div>
+                        <br>
                         <div>
-                            <input type="text " class="form-control " placeholder="GST Number" formControlName="GSTNum" [ngClass]="{ 'is-invalid':GSTNum.errors && (GSTNum.touched || GSTNum.dirty), 'is-valid': GSTNum.valid}" />
+                            <input type="text " class="form-control " placeholder="GST Number " formControlName="GSTNum " [ngClass]="{ 'is-invalid':GSTNum.errors && (GSTNum.touched || GSTNum.dirty), 'is-valid': GSTNum.valid} " />
 
 
                         </div>
                         <br>
 
-                        <button type="submit " class="mb-3 col-12 bg-black text-white" (click)="onSubmit(react_formRes)">Register</button>
+                        <button type="submit " class="mb-3 col-12 bg-black text-white " (click)="onSubmit(react_formRes) ">Register</button>
 
 
                     </div>
-                    <div class="text-center">
-                        <p class="fs-6">Already have an account?
-                            <a class="text-decoration-none text-secondary fs-6" routerLink="/sign_in">Login!</a>
+                    <div class="text-center mt-4 mb-5">
+                        <p class="fs-6 ">Already have an account?
+                            <a class="text-decoration-none text-secondary fs-6 " routerLink="/sign_in ">Login!</a>
                         </p>
                     </div>
                 </form>

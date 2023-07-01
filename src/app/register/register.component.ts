@@ -31,7 +31,7 @@ export class RegisterComponent {
     this.Email = new FormControl('', [
       Validators.required,
 
-      Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]);
+      Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]);
 
     this.Password = new FormControl('', [
       Validators.required,
@@ -49,7 +49,7 @@ export class RegisterComponent {
     ]);
     this.DealershipNum = new FormControl('', [
       Validators.required,
-      Validators.pattern('/^-?(0|[1-9]\d*)?$/')
+      Validators.pattern('[1-9].{7 }')
     ]);
     this.City = new FormControl('', [
       Validators.required
