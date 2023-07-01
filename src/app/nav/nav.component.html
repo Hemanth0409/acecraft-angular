@@ -23,7 +23,7 @@
         </li>
     </ul>
     <div class="d-flex" style="float:right;margin-top:-30px;">
-        <a class="nav-link  me-5 bg-transparent setting"><i class="pi pi-cog" (mouseenter)="toggle()" 
+        <a class="nav-link  me-2 bg-transparent setting"><i class="pi pi-cog" (mouseenter)="toggle()" 
                 (mouseleave)="toggle()" style="font-size: 1.5rem ">
                 <ul class="setting-dropdown bg-transparent"  [hidden]="show">
                     <li class="dropdown ms-5 fs-4 text-center mt-3" routerLink="sign_in">Sign In  |<i class="ms-3 fas fa-sign-in"></i></li>
@@ -44,7 +44,7 @@
                     <li class="dropdown ms-5 fs-4 text-center mt-3">Contact  |<i class="ms-3 fas fa-comments"></i></li>
                 </ul>
             </i></a>
-        <a class="nav-link  me-5" routerLink="cart_details"><i class="pi pi-shopping-cart  ms-3" style="font-size: 1.5rem;"></i> <span class="cart badge badge-cart ng-binding">
+        <a class="nav-link  me-3" routerLink="cart_details"><i class="pi pi-shopping-cart  ms-3" style="font-size: 1.5rem;"></i> <span class="cart badge badge-cart ng-binding">
       {{cart_Count}}
         </span></a>
     </div>
