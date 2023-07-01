@@ -56,7 +56,9 @@ export class RegisterComponent {
     ]);
     this.State = new FormControl('', [
       Validators.required
-    ]);
+    ]);this.GSTNum=new FormControl('',[
+      Validators.required
+    ])
    
 
 
@@ -71,6 +73,7 @@ export class RegisterComponent {
       DealershipNum:this.DealershipNum,
       City:this.City,  
       State:this.State,
+      GSTNum:this.GSTNum
 
     });
   }

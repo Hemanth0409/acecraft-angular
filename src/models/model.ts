@@ -33,3 +33,8 @@ text3: string,
     text2class:string,
     text3class?: string
 }
+
+export interface collegeCarousel
+{
+    imgSrc:string
+}

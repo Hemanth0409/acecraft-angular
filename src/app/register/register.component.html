@@ -110,9 +110,9 @@
                         </div>
                         <br>
                         <div>
-                            <input type=" text " class="form-control " placeholder="City " formControlName="City " [ngClass]="{ 'is-invalid':City.errors && (City.touched || City.dirty), 'is-valid': City.valid} " />
+                            <input type="text" class="form-control" placeholder="City" formControlName="City" [ngClass]="{ 'is-invalid':City.errors && (City.touched || City.dirty), 'is-valid': City.valid} " />
 
-                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger ">
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
 
                                 <h6 *ngIf="City.errors?.required ">Required field</h6>
 
@@ -121,7 +121,7 @@
                         <br>
                         <div class="form-group">
                             <label for="State">State</label>
-                            <select class="form-control" name="State" id="State" formControlName="State">            
+                            <select class="form-control" name="State" id="State" formControlName="State">
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                                 <option value="Assam">Assam</option>
@@ -157,23 +157,27 @@
                                 <option value="Lakshadweep">Lakshadweep</option>
                                 <option value="Delhi">Delhi</option>
                                 <option value="Puducherry">Puducherry</option>
-                              </select>
+                            </select>
                         </div>
                         <br>
                         <div>
-                            <input type="text " class="form-control " placeholder="GST Number " formControlName="GSTNum " [ngClass]="{ 'is-invalid':GSTNum.errors && (GSTNum.touched || GSTNum.dirty), 'is-valid': GSTNum.valid} " />
+                            <input type="text" class="form-control" placeholder="GST Number" formControlName="GSTNum" [ngClass]="{ 'is-invalid':GSTNum.errors && (GSTNum.touched || GSTNum.dirty), 'is-valid': GSTNum.valid} " />
+                            <div class="invalid-feedback text-start fs-6 fst-normal text-danger ">
 
+                                <h6 *ngIf="GSTNum.errors?.required">Required field</h6>
+
+                            </div>
 
                         </div>
                         <br>
 
-                        <button type="submit " class="mb-3 col-12 bg-black text-white " (click)="onSubmit(react_formRes) ">Register</button>
+                        <button type="submit " class="mb-3 col-12 bg-black text-white" (click)="onSubmit(react_formRes)">Register</button>
 
 
                     </div>
                     <div class="text-center mt-4 mb-5">
                         <p class="fs-6 ">Already have an account?
-                            <a class="text-decoration-none text-secondary fs-6 " routerLink="/sign_in ">Login!</a>
+                            <a class="text-decoration-none text-secondary fs-6 " routerLink="/sign_in">Login!</a>
                         </p>
                     </div>
                 </form>

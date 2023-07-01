@@ -56,8 +56,22 @@
     color: #978f8f;
 }
 
+em {
+    color: #978f8f;
+}
+
 body {
     overflow-x: hidden;
+}
+
+.main3 em:before,
+.main3 em::after {
+    display: inline-block;
+    content: "";
+    border-top: .10rem solid #978f8f;
+    width: 4rem;
+    margin: 0 1rem;
+    transform: translateY(0rem);
 }
 
 #key {
