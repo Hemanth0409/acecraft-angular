@@ -24,6 +24,7 @@ import { SortPipe } from './sort.pipe';
 import { CartdetailsComponent } from './cartdetails/cartdetails.component';
 import { StyleClassModule } from 'primeng/styleclass';
 import { FormsModule } from '@angular/forms';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { RegisterComponent } from './register/register.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,NgxImageZoomModule,
     BadgeModule,HttpClientModule,CardModule,ButtonModule,ReactiveFormsModule,StyleClassModule,FormsModule
   ],
   providers: [],

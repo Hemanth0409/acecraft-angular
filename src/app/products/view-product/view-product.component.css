@@ -56,3 +56,12 @@
     margin-left: 30px;
     margin-top: 0px;
 }
+
+
+/* build your own custom Bootstrap theme:
+   https://themestr.app
+*/
+
+.carouselExampleControls {
+    padding: 5%;
+}
