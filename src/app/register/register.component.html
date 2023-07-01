@@ -1,8 +1,8 @@
 <body>
     <div class="container border border-1 mt-5 mb-4">
         <div class="row justify-content-center mt-5 mb-4">
-            <div class="col-4 shadow-lg">
-                <form [formGroup]="react_formRes" (ngsubmit)="onSubmit(react_formRes)">
+            <div class="col-lg-4 col-md-12 shadow-lg">
+                <form [formGroup]="react_formRes" (ngsubmit)="react_formRes.valid && onSubmit(react_formRes)">
                     <div class="form-group">
                         <div class="text-center ">
                             <p class="fs-2 mt-4">Signup with ACECRAFT </p>
@@ -105,7 +105,7 @@
                             <div class="invalid-feedback text-start fs-6 fst-normal text-danger">
 
                                 <h6 *ngIf="DealershipNum.errors?.required">Required field</h6>
-                                <h6 *ngIf="DealershipNum.errors?.pattern">dsfkbj</h6>
+                                <h6 *ngIf="DealershipNum.errors?.pattern">Should Containe only 8 number</h6>
                             </div>
                         </div>
                         <br>
@@ -171,7 +171,7 @@
                         </div>
                         <br>
 
-                        <button type="submit " class="mb-3 col-12 bg-black text-white" (click)="onSubmit(react_formRes)">Register</button>
+                        <button type="submit" class="mb-3 col-12 bg-black text-white register" [disabled]="react_formRes.invalid" (click)="onSubmit(react_formRes)">Register</button>
 
 
                     </div>

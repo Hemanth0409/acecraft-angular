@@ -1,8 +1,8 @@
 <body>
     <div class="container border border-1 mt-4 mb-4">
         <div class="row justify-content-center mt-4 mb-4">
-            <div class="col-4 shadow-lg">
-                <form [formGroup]="react_form" (ngsubmit)="onSubmit(react_form)">
+            <div class="col-lg-4 col-md-12 login shadow-lg">
+                <form [formGroup]="react_form" (ngsubmit)="react_form.valid &&onSubmit(react_form)">
                     <div class="form-group">
                         <div class="text-center ">
                             <p class="fs-2 mt-5">Login with ACECRAFT </p>
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <br>
-                        <button type="submit" class="mb-3 col-12 bg-black text-white" (click)="onSubmit(react_form)">LogIn</button>
+                        <button type="submit" class="mb-3 col-12 bg-black text-white" [disabled]="react_form.invalid" (click)="onSubmit(react_form)">LogIn</button>
 
                         <div class="text-center ">
                             <p class="fs-6">Forget Password?</p>

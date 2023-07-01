@@ -13,6 +13,7 @@ export interface acecraft_main1{
 }
 export interface acecraft_main2{
     class:string;
+    router:string;
     text1:string;
     text2:string;
     text3:string

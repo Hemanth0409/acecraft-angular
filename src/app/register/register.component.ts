@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserDetailsService } from 'src/services/user-details.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit{
+  constructor(private user_details:UserDetailsService){}
   react_formRes!: FormGroup;
   Fname: FormControl | any;
   Lname: FormControl | any
@@ -49,7 +51,7 @@ export class RegisterComponent {
     ]);
     this.DealershipNum = new FormControl('', [
       Validators.required,
-      Validators.pattern('[1-9].{7 }')
+      Validators.pattern('[1-9].{7}')
     ]);
     this.City = new FormControl('', [
       Validators.required
@@ -78,6 +80,8 @@ export class RegisterComponent {
     });
   }
   onSubmit(form: any) {
+    this.user_details.getUserDetails(form.value);
     console.log(form.value)
   }
+  
 }

@@ -53,11 +53,11 @@
         },
         {
             "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/kumarans.png",
-            "link": " /products"
+            "link": "/products"
         },
         {
             "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Logo-%20New%20Horizon%20Gurukul.jpg",
-            "link": " /products"
+            "link": "/products"
         },
         {
             "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/cgis.png",
@@ -76,6 +76,7 @@
     }],
     "acecraft_main2": [{
             "class": "backgroundimg2 me-2",
+            "router": "school",
             "text1": "A grade",
             "text2": "over the common.",
             "text3": "ACECRAFT FOR SCHOOL"
@@ -83,6 +84,7 @@
         {
             "class": "backgroundimg3",
             "text1": "workwear",
+            "router": "enterprises",
             "text2": "Redefined.",
             "text3": "ACECRAFT FOR ENTERPRISES"
         }
@@ -762,5 +764,8 @@
             ]
         }
     ],
-    "cart_list": []
+    "cart_list": [],
+    "user_details": [
+
+    ]
 }

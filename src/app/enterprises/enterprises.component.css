@@ -68,3 +68,22 @@
         .card:hover {
             transform: scale(0.9);
         }
+        
+        #key {
+            font-size: medium;
+            position: relative;
+            animation: mymove 1s infinite;
+            color: #978f8f;
+        }
+        
+        @keyframes mymove {
+            0% {
+                bottom: 0px;
+            }
+            50% {
+                bottom: 5px;
+            }
+            100% {
+                bottom: 0px;
+            }
+        }
