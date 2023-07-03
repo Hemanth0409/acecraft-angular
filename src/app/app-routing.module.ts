@@ -11,6 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { ViewProductComponent } from './products/view-product/view-product.component';
 import { CartdetailsComponent } from './cartdetails/cartdetails.component';
 import { RegisterComponent } from './register/register.component';
+
 const routes: Routes = [
   {
     path: '',

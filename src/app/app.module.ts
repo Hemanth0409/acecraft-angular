@@ -26,6 +26,8 @@ import { StyleClassModule } from 'primeng/styleclass';
 import { FormsModule } from '@angular/forms';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { RegisterComponent } from './register/register.component';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,9 +52,9 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,NgxImageZoomModule,
-    BadgeModule,HttpClientModule,CardModule,ButtonModule,ReactiveFormsModule,StyleClassModule,FormsModule
+    BadgeModule,HttpClientModule,CardModule,ButtonModule,ReactiveFormsModule,StyleClassModule,FormsModule,ToastModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,11 +7,11 @@ import Swal from 'sweetalert2';
   providedIn: 'root'
 })
 export class UserDetailsService {
-  user_details: string = 'http://localhost:3000/user_details'
+  user_details = 'http://localhost:3000/user_details'
 
-  constructor(private http: HttpClient,private router:Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
-  getUserDetails(form:any) {
+  getUserDetails(form: any) {
     return this.http.post<UserDetails[]>(this.user_details, form).subscribe(() => {
       const Toast = Swal.mixin({
         toast: true,
@@ -20,14 +20,21 @@ export class UserDetailsService {
         timer: 1000,
         timerProgressBar: true,
       })
-
       Toast.fire({
         icon: 'success',
         title: 'Registered successfully'
-      }).then(() => { 
+      }).then(() => {
+        this.router.navigate(['/sign_in']);
+      })
+    })
+  }
 
-        this.router.navigate (['/sign_in']);
-    })
-    })
+  getUser() {
+    return this.http.get<UserDetails[]>(this.user_details)
+  }
+  isLogged(form: any, id: number) {
+    let Url = this.user_details + '/' + id;
+    form.isLogged = true
+    return this.http.put(Url,form).subscribe(()=>{console.log("success")})
   }
 }

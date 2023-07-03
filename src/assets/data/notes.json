@@ -776,5 +776,51 @@
     }
   ],
   "cart_list": [],
-  "user_details": []
+  "user_details": [
+    {
+      "Fname": "adf",
+      "Lname": "sfv",
+      "Email": "qwe@gamil.com",
+      "Password": "Qwerty!23",
+      "cPassword": "Qwerty!23",
+      "Radiobtn": "school",
+      "Dealership": "af",
+      "DealershipNum": "12344567",
+      "City": "aef",
+      "State": "Assam",
+      "GSTNum": "1234567",
+      "isLogged": true,
+      "id": 1
+    },
+    {
+      "Fname": "Sharon",
+      "Lname": "David",
+      "Email": "Sharon@gmail.com",
+      "Password": "Sharon!2345",
+      "cPassword": "Sharon!2345",
+      "Radiobtn": "school",
+      "Dealership": "sf",
+      "DealershipNum": "12345678",
+      "City": "xgvf",
+      "State": "Punjab",
+      "GSTNum": "dvgsx",
+      "isLogged": true,
+      "id": 2
+    },
+    {
+      "Fname": "rsg",
+      "Lname": "reg",
+      "Email": "erg@sdfg.fgh",
+      "Password": "Hemanth!2",
+      "cPassword": "HEmanth!2sdgv",
+      "Radiobtn": "school",
+      "Dealership": "feda",
+      "DealershipNum": "12234566",
+      "City": "sdfg",
+      "State": "Odisha",
+      "GSTNum": "f",
+      "isLogged": false,
+      "id": 3
+    }
+  ]
 }

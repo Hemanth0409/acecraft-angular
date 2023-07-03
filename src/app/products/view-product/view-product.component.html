@@ -7,9 +7,9 @@
             <div class="col-6">
                 <div>
                     <h1>{{ item.title }}</h1>
-                    <p>Product Code:{{ item.productCode }}</p>
-                    <p>Brand: {{ item.brand }}</p>
-                    <p>Sold By: {{ item.soldBy }}</p>
+                    <p><b>Product Code:</b>{{ item.productCode }}</p>
+                    <p><b>Brand:</b> {{ item.brand }}</p>
+                    <p><b>Sold By:</b> {{ item.soldBy }}</p>
                     <span class="price">
           {{ item.price | currency : "INR" : "symbol" : "3.0" }}
         </span>
@@ -104,6 +104,9 @@
                 <li>{{ desc }}</li>
             </ul>
         </div>
-        <div class="row"></div>
+        <div class="row mt-4">
+            <h4 class="desc">Products</h4>
+
+        </div>
     </div>
 </div>

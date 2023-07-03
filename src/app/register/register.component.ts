@@ -1,14 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserDetailsService } from 'src/services/user-details.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit{
-  constructor(private user_details:UserDetailsService){}
+export class RegisterComponent implements OnInit {
+
+
+  constructor(private user_details: UserDetailsService,
+    private formBuilder:FormBuilder
+) { 
+     
+  }
   react_formRes!: FormGroup;
   Fname: FormControl | any;
   Lname: FormControl | any
@@ -21,6 +28,7 @@ export class RegisterComponent implements OnInit{
   City: FormControl | any;
   State: FormControl | any;
   GSTNum: FormControl | any;
+
 
   ngOnInit(): void {
     this.Fname = new FormControl('', [
@@ -39,7 +47,8 @@ export class RegisterComponent implements OnInit{
       Validators.required,
       Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')
 
-    ]); this.cPassword = new FormControl('', [
+    ]); 
+    this.cPassword = new FormControl('', [
       Validators.required,
       Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')
     ])
@@ -58,30 +67,34 @@ export class RegisterComponent implements OnInit{
     ]);
     this.State = new FormControl('', [
       Validators.required
-    ]);this.GSTNum=new FormControl('',[
+    ]); this.GSTNum = new FormControl('', [
       Validators.required
     ])
-   
+
 
 
     this.react_formRes = new FormGroup({
       Fname: this.Fname,
-      Lname:this.Lname,
-      Email:this.Email,
+      Lname: this.Lname,
+      Email: this.Email,
       Password: this.Password,
-      cPassword:this.cPassword,
-      Radiobtn:this.Radiobtn,
-      Dealership:this.Dealership,
-      DealershipNum:this.DealershipNum,
-      City:this.City,  
-      State:this.State,
-      GSTNum:this.GSTNum
-
+      cPassword: this.cPassword,
+      Radiobtn: this.Radiobtn,
+      Dealership: this.Dealership,
+      DealershipNum: this.DealershipNum,
+      City: this.City,
+      State: this.State,
+      GSTNum: this.GSTNum,
+isLogged:this.formBuilder.control(false)
     });
   }
+ 
   onSubmit(form: any) {
     this.user_details.getUserDetails(form.value);
     console.log(form.value)
+    if(this.Password!=this.cPassword){
+      Swal.fire(this.Password)
+    }
   }
-  
+
 }

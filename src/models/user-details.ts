@@ -10,4 +10,5 @@ export interface UserDetails {
     City:string,
     State:string,
     GSTNum:number
+    isLogged:boolean
 }

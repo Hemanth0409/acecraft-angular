@@ -8,17 +8,17 @@
                             <p class="fs-2 mt-5">Login with ACECRAFT </p>
                         </div>
                         <div>
-                            <input type="text" class="form-control mt-3" placeholder="Username" formControlName="username" [ngClass]="{'is-invalid':username.errors &&
-                (username.touched || username.dirty),'is-valid': username.valid}" />
+                            <input type="text" class="form-control mt-3" placeholder="Email" formControlName="Email" [ngClass]="{'is-invalid':Email.errors &&
+                (Email.touched || Email.dirty),'is-valid': Email.valid}" />
 
                             <div class="invalid-feedback text-center fs-6 fst-normal text-danger">
 
-                                <strong *ngIf="username.errors?.required">Enter a valid username</strong>
-                                <strong *ngIf="username.errors?.minlength">Username length must be greater than
-                        {{ username.errors?.minlength.requiredLength }} characters.
-                        {{username.errors?.minlength.requiredLength -username.errors?.minlength.actualLength}}more characters required.
+                                <strong *ngIf="Email.errors?.required">Enter a valid Email</strong>
+                                <strong *ngIf="Email.errors?.minlength">Email length must be greater than
+                        {{ Email.errors?.minlength.requiredLength }} characters.
+                        {{Email.errors?.minlength.requiredLength -Email.errors?.minlength.actualLength}}more characters required.
                     </strong>
-                                <strong *ngIf="username.errors?.maxlength">Username length must be less than 17 characters
+                                <strong *ngIf="Email.errors?.maxlength">Email length must be less than 17 characters
                     </strong>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                             <p class="fs-6">Forget Password?</p>
                         </div>
                     </div>
-
+                    <p-toast></p-toast>
                 </form>
             </div>
         </div>
