@@ -36,5 +36,10 @@ export class UserDetailsService {
     let Url = this.user_details + '/' + id;
     form.isLogged = true
     return this.http.put(Url,form).subscribe(()=>{console.log("success")})
-  }
+  } 
+  isLoggedOff(form: any, id: number) {
+    let Url = this.user_details + '/' + id;
+    form.isLogged = false
+    return this.http.put(Url,form).subscribe(()=>{console.log("success")})
+  } 
 }

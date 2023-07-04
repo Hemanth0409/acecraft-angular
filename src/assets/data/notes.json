@@ -789,7 +789,7 @@
       "City": "aef",
       "State": "Assam",
       "GSTNum": "1234567",
-      "isLogged": true,
+      "isLogged": false,
       "id": 1
     },
     {
@@ -804,7 +804,7 @@
       "City": "xgvf",
       "State": "Punjab",
       "GSTNum": "dvgsx",
-      "isLogged": true,
+      "isLogged": false,
       "id": 2
     },
     {

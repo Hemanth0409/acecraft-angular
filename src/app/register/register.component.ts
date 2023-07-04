@@ -12,9 +12,9 @@ export class RegisterComponent implements OnInit {
 
 
   constructor(private user_details: UserDetailsService,
-    private formBuilder:FormBuilder
-) { 
-     
+    private formBuilder: FormBuilder
+  ) {
+
   }
   react_formRes!: FormGroup;
   Fname: FormControl | any;
@@ -47,7 +47,7 @@ export class RegisterComponent implements OnInit {
       Validators.required,
       Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')
 
-    ]); 
+    ]);
     this.cPassword = new FormControl('', [
       Validators.required,
       Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')
@@ -85,16 +85,14 @@ export class RegisterComponent implements OnInit {
       City: this.City,
       State: this.State,
       GSTNum: this.GSTNum,
-isLogged:this.formBuilder.control(false)
+      isLogged: this.formBuilder.control(false)
     });
   }
- 
+
   onSubmit(form: any) {
     this.user_details.getUserDetails(form.value);
     console.log(form.value)
-    if(this.Password!=this.cPassword){
-      Swal.fire(this.Password)
-    }
+  
   }
 
 }

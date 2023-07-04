@@ -3,7 +3,7 @@ import { FormGroup,FormControl} from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserDetailsService } from 'src/services/user-details.service';
-import { MessageService } from 'primeng/api';
+import { UserService } from 'src/services/user.service';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-sign-in',
@@ -11,24 +11,32 @@ import Swal from 'sweetalert2';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
-
-  constructor(private userdetails:UserDetailsService,private router:Router,private alert:MessageService){}
+  
+  submitted = false;
+  get f() {
+    return this.react_form.controls;
+  }
+  constructor(private userdetails:UserDetailsService,private router:Router,private authService:UserService){}
   user_profile:any;
   react_form!:FormGroup;
   Email:FormControl|any;
   password:FormControl|any
   
   onSubmit(form:any){
+    this.submitted = true;
     console.log(form.value)
-    // this.userdetails.getUser().subscribe((res)=>{this.user_profile=res;
+    if (this.react_form.invalid) {
+      return;
+    }
+
     this.userdetails.getUser().subscribe((res)=>{this.user_profile=res;
       console.log(this.user_profile)
-      const user = this.user_profile.find((a: any) => {
+      const user = this.user_profile.find((details: any) => {
         if (
-          a.Email === this.react_form.value.Email &&
-          a.Password === this.react_form.value.password
+          details.Email === this.react_form.value.Email &&
+          details.Password === this.react_form.value.password
         ) {
-          this.userdetails.isLogged(a, a.id);
+          this.userdetails.isLogged(details, details.id);
           return true;
         }
         return false;
@@ -36,12 +44,11 @@ export class SignInComponent implements OnInit {
       if (user) {
         console.log(this.user_profile.id);
         this.react_form.reset();
-        this.router.navigate(['/']);
         const Toast = Swal.mixin({
           toast: true,
           position: 'top',
           showConfirmButton: false,
-          timer: 4000,
+          timer: 400,
           timerProgressBar: true,
         })
         Toast.fire({
@@ -49,13 +56,14 @@ export class SignInComponent implements OnInit {
           title: 'Logged successfully'
         }).then(() => {
           this.router.navigate(['/']);
+          this.authService.validateAuth(true); 
         })
       } else {
         const Toast = Swal.mixin({
           toast: true,
           position: 'top',
           showConfirmButton: false,
-          timer: 5000, 
+          timer: 500, 
           timerProgressBar: true,
         })
         Toast.fire({
@@ -63,11 +71,13 @@ export class SignInComponent implements OnInit {
           title: 'Went wrong'
         })
         this.react_form.reset();
-      }
+        this.authService.validateAuth(false); 
+      } 
     });
+   
   }
   ngOnInit(): void {
-    this.Email = new FormControl('', [
+      this.Email = new FormControl('', [
       Validators.required,  
       Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]);
 
