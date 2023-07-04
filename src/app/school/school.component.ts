@@ -10,7 +10,7 @@ export class SchoolComponent implements OnInit {
   
   school_logo:any[]=[]
 constructor(private service:ServiceService){}
-
+value: string | undefined;
 ngOnInit(): void {
   this.service.getSchool_logo().subscribe((res) => {
     this.school_logo = res;

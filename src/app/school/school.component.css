@@ -47,6 +47,10 @@
     color: #978f8f;
 }
 
+::placeholder {
+    color: #978f8f;
+}
+
 .signature {
     font-family: 'Blenheim Signature', sans-serif;
     font-size: 18px;
