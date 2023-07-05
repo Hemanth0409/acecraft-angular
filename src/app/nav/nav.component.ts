@@ -38,7 +38,7 @@ export class NavComponent implements OnInit {
   logout() {
     this.details.getUser().subscribe((res) => {
       this.user_profile = res
-      const user = this.user_profile.find((data: any) => {
+       this.user_profile.find((data: any) => {
         if (data.isLogged == true) {
           this.details.isLoggedOff(data, data.id);
           const Toast = Swal.mixin({
@@ -52,8 +52,9 @@ export class NavComponent implements OnInit {
             icon: 'success',
             title: 'Logged successfully'
           }).then(() => {
-            this.router.navigate(['/sign_in']);
-            return false;
+           
+            this.router.navigate(['/']);
+            window.location.reload()
            }) 
         }
         return true;

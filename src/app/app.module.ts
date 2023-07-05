@@ -51,8 +51,16 @@ import { MessageService } from 'primeng/api';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,NgxImageZoomModule,
-    BadgeModule,HttpClientModule,CardModule,ButtonModule,ReactiveFormsModule,StyleClassModule,FormsModule,ToastModule
+    AppRoutingModule,
+    NgxImageZoomModule,
+    BadgeModule,
+    HttpClientModule,
+    CardModule,
+    ButtonModule,
+    ReactiveFormsModule,
+    StyleClassModule,
+    FormsModule,
+    ToastModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

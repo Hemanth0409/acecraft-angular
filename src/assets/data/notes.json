@@ -775,7 +775,25 @@
       ]
     }
   ],
-  "cart_list": [],
+  "cart_list": [
+    {
+      "id": 5,
+      "title": "CIS White Day Wear (Grade 9 & 10)",
+      "productCode": "CIHDPT28",
+      "brand": "ACECRAFT",
+      "soldBy": "Alchemy",
+      "price": 500,
+      "originalPrice": 825,
+      "offerPercent": 39,
+      "gender": "all",
+      "size": 30,
+      "description": [
+        "Made from Poly-cotton.Henley neckline.Short sleeves."
+      ],
+      "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d7044a72cc46b41ac7ca4/webp/hi-school-480x480.jpg",
+      "quantity": 1
+    }
+  ],
   "user_details": [
     {
       "Fname": "adf",

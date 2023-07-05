@@ -31,7 +31,7 @@ cart:Cartlist={
   originalPrice: 0,
   offerPercent: 0,
   gender: '',
-  size:26,
+  size:30,
   description: [],
   imgSrc: '',
   totalprice: 0,

@@ -11,13 +11,14 @@ import { ProductsComponent } from './products/products.component';
 import { ViewProductComponent } from './products/view-product/view-product.component';
 import { CartdetailsComponent } from './cartdetails/cartdetails.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuard } from './auth-guard.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: AcecraftComponent,
   },
-  { path: 'school', component: SchoolComponent },
+  { path: 'school', component: SchoolComponent},
   { path: 'products', component: ProductsComponent },
   { path: 'enterprises', component: EnterprisesComponent },
   { path: 'notes', component: NotesComponent },
@@ -25,7 +26,7 @@ const routes: Routes = [
   {path:'college',component:CollegeComponent},
   {path:'sign_in',component:SignInComponent},
   {path:"viewProduct/:id",component:ViewProductComponent},
-  {path:"cart_details",component:CartdetailsComponent},
+  {path:"cart_details",component:CartdetailsComponent,canActivate:[AuthGuard] },
   {path:"register",component:RegisterComponent}
 ];
 
