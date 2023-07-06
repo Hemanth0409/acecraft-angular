@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
   City: FormControl | any;
   State: FormControl | any;
   GSTNum: FormControl | any;
-
+cart:any=[]
 
   ngOnInit(): void {
     this.Fname = new FormControl('', [
@@ -85,12 +85,13 @@ export class RegisterComponent implements OnInit {
       City: this.City,
       State: this.State,
       GSTNum: this.GSTNum,
-      isLogged: this.formBuilder.control(false)
+      isLogged: this.formBuilder.control(false),
+      
     });
   }
 
   onSubmit(form: any) {
-    this.user_details.getUserDetails(form.value);
+    this.user_details.getUserDetails(form.value);    
     console.log(form.value)
   
   }

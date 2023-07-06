@@ -775,25 +775,7 @@
       ]
     }
   ],
-  "cart_list": [
-    {
-      "id": 5,
-      "title": "CIS White Day Wear (Grade 9 & 10)",
-      "productCode": "CIHDPT28",
-      "brand": "ACECRAFT",
-      "soldBy": "Alchemy",
-      "price": 500,
-      "originalPrice": 825,
-      "offerPercent": 39,
-      "gender": "all",
-      "size": 30,
-      "description": [
-        "Made from Poly-cotton.Henley neckline.Short sleeves."
-      ],
-      "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d7044a72cc46b41ac7ca4/webp/hi-school-480x480.jpg",
-      "quantity": 1
-    }
-  ],
+  "cart_list": [],
   "user_details": [
     {
       "Fname": "adf",
@@ -808,7 +790,8 @@
       "State": "Assam",
       "GSTNum": "1234567",
       "isLogged": false,
-      "id": 1
+      "id": 1,
+      "cart": []
     },
     {
       "Fname": "Sharon",
@@ -823,7 +806,8 @@
       "State": "Punjab",
       "GSTNum": "dvgsx",
       "isLogged": false,
-      "id": 2
+      "id": 2,
+      "cart": []
     },
     {
       "Fname": "rsg",
@@ -838,7 +822,23 @@
       "State": "Odisha",
       "GSTNum": "f",
       "isLogged": false,
-      "id": 3
+      "id": 3,
+      "cart": []
+    },
+    {
+      "Fname": "Sharon",
+      "Lname": "David",
+      "Email": "Sharon@gmail.com",
+      "Password": "Sharon!23",
+      "cPassword": "Sharon!23",
+      "Radiobtn": "school",
+      "Dealership": "sdfvgs",
+      "DealershipNum": "12343456",
+      "City": "sgvg",
+      "State": "Nagaland",
+      "GSTNum": "1123456",
+      "isLogged": false,
+      "id": 4
     }
   ]
 }
