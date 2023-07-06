@@ -56,9 +56,11 @@ export class NavComponent implements OnInit {
             this.router.navigate(['/']);
             window.location.reload()
            }) 
+           return true;
         }
-        return true;
-      })
+      return false;
+      }
+      )
     })
   }
 }

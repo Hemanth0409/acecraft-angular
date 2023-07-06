@@ -10,5 +10,6 @@ export interface UserDetails {
     City:string,
     State:string,
     GSTNum:number
-    isLogged:boolean
+    isLogged:boolean,
+    cart:any[]
 }

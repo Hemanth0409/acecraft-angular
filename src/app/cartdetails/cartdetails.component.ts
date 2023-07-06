@@ -46,12 +46,19 @@ export class CartdetailsComponent implements OnInit{
    onDecrement(item:Cartlist){
     if(item.quantity==1){
       this.delete(item)
-   Swal.fire ({
-      title: "Your product has been removed",
-      icon: "warning",
-      
-    }).then(() => { 
-    
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      })
+  
+      Toast.fire({
+        icon: 'success',
+        title: 'Product has been removed successfully'
+      }).then(() => { 
+
       this.router.navigate (['/cart_details']);
   })}
     item.quantity--; 
