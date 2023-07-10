@@ -6,13 +6,13 @@ import { Model, acecraft_main1, acecraft_main2, school_logo,airen_mask, enterpri
 })
 export class ServiceService  {
 
-  Notesurl:string='http://localhost:3000/notes'
-schoollogo:string='http://localhost:3000/school_logo'
-acecraft_main1:string='http://localhost:3000/acecraft_main1'
-acecraft_main2:string='http://localhost:3000/acecraft_main2'
-airen_mask:string='http://localhost:3000/airen_mask'
-enterprises_card:string='  http://localhost:3000/enterpriseimages'
-collegeCarousel:string='http://localhost:3000/collegeCarousel'
+  Notesurl:string='https://acecraft-json.onrender.com/notes'
+schoollogo:string='https://acecraft-json.onrender.com/school_logo'
+acecraft_main1:string='https://acecraft-json.onrender.com/acecraft_main1'
+acecraft_main2:string='https://acecraft-json.onrender.com/acecraft_main2'
+airen_mask:string='https://acecraft-json.onrender.com/airen_mask'
+enterprises_card:string='https://acecraft-json.onrender.com/enterpriseimages'
+collegeCarousel:string='https://acecraft-json.onrender.com/collegeCarousel'
 
   constructor(private http:HttpClient) { }
 getCarousel(){

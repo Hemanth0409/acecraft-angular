@@ -32,7 +32,7 @@ export class CartdetailsComponent implements OnInit{
   totalprice:number=0;
   quantity=1;
   totalPrice(data:any){
-  debugger
+
   const intialValue = 0;
   this.cart_details=data
   const total=this.cart_details.reduce((sum:any,item:any)=>sum+(item.price*item.quantity),intialValue);
@@ -94,9 +94,41 @@ export class CartdetailsComponent implements OnInit{
   
 }
 display:any=[]
+invokeStripe() {
+  if (!window.document.getElementById('stripe-script')) {
+    const script = window.document.createElement('script');
+    script.id = 'stripe-script';
+    script.type = 'text/javascript';
+    script.src = 'https://checkout.stripe.com/checkout.js';
+    script.onload = () => {
+      this.paymentHandler = (<any>window).StripeCheckout.configure({
+        key: 'pk_test_51NPh3qSFbA4ym3tq5OuiThaAv73vMeEQIjVSjtuB3azK7OfogbPNpQJVop9bWUEp2nhwXDJxM6wHFRAoDTMrWkmH004m2qMl3d',
+        locale: 'auto',
+        token: function (stripeToken: any) {
+          console.log(stripeToken);
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+          });
+
+          Toast.fire({
+            icon: 'error',
+            title: 'Error in generating Stripe Payment Gateway',
+          });
+        },
+      });
+    };
+    window.document.body.appendChild(script);
+  }
+}
 
 isHidden:boolean=true
   none='block'
+
+
   ngOnInit(): void {
     this.cartSvc.getCartItem().subscribe((res)=>{this.cart=res;})
     this.cartSvc.getCartItem().subscribe(
@@ -110,6 +142,39 @@ isHidden:boolean=true
         console.log(this.display);
       }
     )
+    this.invokeStripe();
+  }
+
+  paymentHandler: any = null;
+
+ 
+  makePayment(amount: any) {
+  
+    const paymentHandler = (<any>window).StripeCheckout.configure({
+      key: 'pk_test_51NPhAIDBuqf3gYxJaVuM2k513NFWYSUuvSK29hPVgHKx92rd2dBhz5xEc5qABUMoi12szZZ7Ik3nI7gU21hXkffC00vHQmnBMf',
+      locale: 'auto',
+      token: function (stripeToken: any) {
+        console.log(stripeToken);
+        //alert('Stripe token generated!');
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+        });
+
+        Toast.fire({
+          icon: 'success',
+          title: 'Order Placed Successfully',
+        });
+      },
+    });
+    paymentHandler.open({
+      name: 'Course',
+      description: 'Order Details',
+      amount: amount,
+    });
   }
 
 }

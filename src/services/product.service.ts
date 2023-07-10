@@ -6,7 +6,7 @@ import { Products } from 'src/models/product';
   providedIn: 'root'
 })
 export class ProductService {
-url:string='http://localhost:3000/Products'
+url:string='https://acecraft-json.onrender.com/Products'
   constructor(private http: HttpClient) { }
   getProducts() {
     return this.http.get<Products[]>(this.url);

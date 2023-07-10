@@ -10,7 +10,7 @@ export class CartService {
 
 
   url:string='';
-  cartUrl='http://localhost:3000/cart_list'
+  cartUrl='https://acecraft-json.onrender.com/cart_list'
     constructor(private http:HttpClient) { 
       this.url=this.cartUrl+'/'
     }

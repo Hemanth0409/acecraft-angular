@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
   providedIn: 'root'
 })
 export class UserDetailsService {
-  user_details = 'http://localhost:3000/user_details'
+  user_details = 'https://acecraft-json.onrender.com/user_details'
 
   constructor(private http: HttpClient, private router: Router) { }
 
