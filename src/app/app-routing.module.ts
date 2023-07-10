@@ -26,10 +26,10 @@ const routes: Routes = [
   {path:'college',component:CollegeComponent},
   {path:'sign_in',component:SignInComponent},
   {path:"viewProduct/:id",component:ViewProductComponent},
-  {path:"cart_details",component:CartdetailsComponent,canActivate:[AuthGuard] },
+  {path:"cart_details",component:CartdetailsComponent },
   {path:"register",component:RegisterComponent}
 ];
-
+//canActivate:[AuthGuard]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
