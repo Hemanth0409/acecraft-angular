@@ -11,7 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { ViewProductComponent } from './products/view-product/view-product.component';
 import { CartdetailsComponent } from './cartdetails/cartdetails.component';
 import { RegisterComponent } from './register/register.component';
-import { AuthGuard } from './shared-module/auth-guard.guard';
+import { AuthGuard } from '../shared-module/auth-guard.guard';
 
 const routes: Routes = [
   {
