@@ -58,9 +58,14 @@ export class NavComponent implements OnInit {
            }) 
            return true;
         }
+        if(data.isLogged==false){
+          this.cart_Count=0
+        }
       return false;
       }
       )
     })
+    
   }
+
 }
