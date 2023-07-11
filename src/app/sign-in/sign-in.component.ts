@@ -48,6 +48,7 @@ export class SignInComponent implements OnInit {
       if (user) {
         console.log(this.user_profile.id);
         this.react_form.reset();
+        localStorage.setItem('token',Math.random().toString())
         const Toast = Swal.mixin({
           toast: true,
           position: 'top',

@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
   }
   cart_Count = 0;
   auth: boolean = false
-  constructor(private cartSvc: CartService, private authService: UserService, private details: UserDetailsService,private router:Router ) { }
+  constructor(private cartSvc: CartService, private authService: UserService, private details: UserDetailsService, private router: Router) { }
   ngOnInit(): void {
     this.authService.authSubject.subscribe(
       data => {
@@ -38,8 +38,10 @@ export class NavComponent implements OnInit {
   logout() {
     this.details.getUser().subscribe((res) => {
       this.user_profile = res
-       this.user_profile.find((data: any) => {
-        if (data.isLogged == true) {
+      this.user_profile.find((data: any) => {
+        const confirmation = confirm('Logged Out')
+        if (confirmation && data.isLogged == true) {
+          localStorage.removeItem('token');
           this.details.isLoggedOff(data, data.id);
           const Toast = Swal.mixin({
             toast: true,
@@ -52,17 +54,17 @@ export class NavComponent implements OnInit {
             icon: 'success',
             title: 'Logged successfully'
           }).then(() => {
-           
+
             this.router.navigate(['/']);
             window.location.reload()
-           }) 
-           return true;
+          })
+          return true;
         }
-      return false;
+        return false;
       }
       )
     })
-    
+
   }
 
 }

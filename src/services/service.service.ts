@@ -6,19 +6,13 @@ import { environment } from 'src/Environment/environment';
   providedIn: 'root'
 })
 export class ServiceService {
-  //Notes page URl 
+//URL for enviroment Setup
   Notesurl=environment.Notesurl;
-  //School logo page URl 
   schoollogo = environment.schoollogo;
-  //acecraft  page URl 
   acecraft_main1=environment.acecraft_main1;
-  //acecraft URl 
   acecraft_main2=environment.acecraft_main2
-  //airen_mask URl 
   airen_mask=environment.airen_mask
-  //Enterprise URl 
   enterprises_card=environment.enterprises_card
-  //College URl 
   collegeCarousel=environment.collegeCarousel
 
   constructor(private http: HttpClient) { }
