@@ -31,7 +31,6 @@
 
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
-import { MessageService } from 'primeng/api';
 import Swal from 'sweetalert2';
 
 
@@ -54,7 +53,7 @@ export const AuthGuard: CanActivateFn = (route, state) => {
     })
     Toast.fire({
       icon: 'warning',
-      title: 'Log in to Explore'
+      title: 'Log in to View Cart!!'
     })
     return false
   }
