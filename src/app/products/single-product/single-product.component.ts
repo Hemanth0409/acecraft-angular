@@ -1,4 +1,3 @@
-
 import { Component, Input, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 @Component({
@@ -16,7 +15,6 @@ constructor(
 public show:boolean = true;
 toggle() {
   this.show = !this.show;
-
 }
 ngOnInit() {}
 

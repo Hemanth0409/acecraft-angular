@@ -135,7 +135,7 @@ isHidden:boolean=true
       (response)=>{
         this.display=response;
        if(this.display==0){
-        this.isHidden=false//for hiding the default message
+        this.isHidden=false
         this.none="none"
         console.log(this.isHidden);
        }
@@ -155,7 +155,6 @@ isHidden:boolean=true
       locale: 'auto',
       token: function (stripeToken: any) {
         console.log(stripeToken);
-        //alert('Stripe token generated!');
         const Toast = Swal.mixin({
           toast: true,
           position: 'top',

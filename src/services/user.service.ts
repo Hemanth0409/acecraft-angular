@@ -12,16 +12,14 @@ export class UserService {
 public authSubject =new Subject<boolean>();
 validateAuth(data:boolean){
   this.authSubject.next(data)
-  console.log(data)
+  
 }
 value?:boolean;
 getAuthStatus(){
 this.authSubject.subscribe(
   data => 
   {
-    console.log('data ' + data);
     this.value= data;
-    console.log('authValue '+this.value);
   }
 );
 return this.value;

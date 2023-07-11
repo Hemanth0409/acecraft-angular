@@ -56,6 +56,8 @@ addToCart(item:any){
   this.cart.size=this.cart.size;
   
   this.cartsvc.addToCart(this.cart);
+
+
   const Toast = Swal.mixin({
     toast: true,
     position: 'top',

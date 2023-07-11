@@ -17,11 +17,10 @@ export class ProductsComponent implements OnInit {
 
 
   onOptionsSelected(event: any) {
-    console.log(event.target.value); 
     this.optionSelected = event.target.value; 
-    if (this.optionSelected === 'lth') {
+    if (this.optionSelected === 'low2high') {
       (this.sortParam = 'price'), (this.sortDirection = 'asc');
-    } else if (this.optionSelected === 'htl') {
+    } else if (this.optionSelected === 'high2low') {
       (this.sortParam = 'price'), (this.sortDirection = 'desc');
     } else if (this.optionSelected === 'nasc') {
       (this.sortParam = 'title'), (this.sortDirection = 'asc');

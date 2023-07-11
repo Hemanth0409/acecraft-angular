@@ -25,14 +25,14 @@ export class NavComponent implements OnInit {
         this.auth = data;
       }
     );
-    this.cartSvc.getCartItem().subscribe((res) => {
-      this.cart_Count = res.length;
-      console.log(this.cart_Count);
-    });
     this.cartSvc.countSubject.subscribe((res) => {
       this.cart_Count = res;
       console.log(this.cart_Count)
     })
+    this.cartSvc.getCartItem().subscribe((res) => {
+      this.cart_Count = res.length;
+      console.log(this.cart_Count);
+    });
   }
   user_profile: any;
   logout() {
@@ -57,9 +57,6 @@ export class NavComponent implements OnInit {
             window.location.reload()
            }) 
            return true;
-        }
-        if(data.isLogged==false){
-          this.cart_Count=0
         }
       return false;
       }

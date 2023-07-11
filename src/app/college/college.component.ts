@@ -9,8 +9,8 @@ export class CollegeComponent implements OnInit{
   collegeCarousel:any[]=[]
   constructor(private service:ServiceService){}
 ngOnInit(): void {
-this.service.getCarousel().subscribe((res)=>{
-  this.collegeCarousel=res;
+this.service.getCarousel().subscribe((data)=>{
+  this.collegeCarousel=data;
 })
 }
 }

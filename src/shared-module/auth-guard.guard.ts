@@ -17,16 +17,13 @@ export class AuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     var isAuth = this.authService.authSubject.subscribe((data) => {
-      console.log('next subscribed value: ' + data);
       this.isAuthenticated = data;
     });
 
     if (this.isAuthenticated == false) {
-      console.log('next : ' + this.isAuthenticated);
       this.router.navigate(['/sign_in']);
       return false;
     } else {
-      console.log('subscribed value:' + this.isAuthenticated);
       return true;
     }
   }
