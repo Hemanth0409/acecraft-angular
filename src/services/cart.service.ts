@@ -13,20 +13,19 @@ export class CartService {
   url: string = '';
   cartUrl = environment.cartUrl
   constructor(private http: HttpClient) {
-    this.url = this.cartUrl + '/'
+    this.url = this.cartUrl + '/';
   }
 
   //Post the cart list(create)
   addToCart(product: Cartlist) {
-    this.http.post<Cartlist[]>(this.cartUrl, product).subscribe((data) => {
-      console.log(data)
+    return this.http.post<Cartlist[]>(this.cartUrl, product).subscribe((data) => {
     })
   }
 
   //Update a details(Put) 
   updateCart(product: Cartlist) {
     let updateUrl = this.cartUrl + '/' + product.id
-    this.http.put<Cartlist[]>(updateUrl, product).subscribe(() => {
+   return this.http.put<Cartlist[]>(updateUrl, product).subscribe(() => {
       const Toast = Swal.mixin({
         toast: true,
         position: 'top',
@@ -49,7 +48,7 @@ export class CartService {
 
   //Remove the product (Delete)
   removeCartItem(item: any) {
-    return this.http.delete(this.url + item.id)
+    return this.http.delete(this.url + item.id);
   }
 
   //Fetch the count of cart items

@@ -8,7 +8,7 @@ import { ServiceService } from 'src/services/service.service';
 export class SchoolComponent implements OnInit {
   imgURL="https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/BK,.jpg"
   
-  school_logo:any[]=[]
+  school_logo:any[]=[];
 constructor(private service:ServiceService){}
 value: string | undefined;
 ngOnInit(): void {

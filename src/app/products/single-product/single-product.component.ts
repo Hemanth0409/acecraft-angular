@@ -14,7 +14,7 @@ constructor(
 ) {}
 public show:boolean = true;
 toggle() {
-  this.show = !this.show;
+  return   this.show = !this.show;
 }
 ngOnInit() {}
 
@@ -22,6 +22,6 @@ productId!: number;
 
 viewProduct(id: number) {
   this.productId = id;
-  this.router.navigate(['viewProduct/' + id]);
+  return  this.router.navigate(['viewProduct/' + id]);
 }
 }

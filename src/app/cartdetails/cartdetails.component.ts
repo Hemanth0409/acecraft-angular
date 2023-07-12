@@ -41,7 +41,7 @@ export class CartdetailsComponent implements OnInit{
   cart:Cartlist[]=[]
   onIncerment(item:Cartlist){
     item.quantity++;
-    this.cartSvc.updateCart(item)
+   return this.cartSvc.updateCart(item)
   } 
    onDecrement(item:Cartlist){
     if(item.quantity==1){
@@ -62,7 +62,7 @@ export class CartdetailsComponent implements OnInit{
       this.router.navigate (['/cart_details']);
   })}
     item.quantity--; 
-    this.cartSvc.updateCart(item)
+ return this.cartSvc.updateCart(item)
 
    
   }
@@ -85,12 +85,12 @@ export class CartdetailsComponent implements OnInit{
     this.cartSvc.getCount();
   }
   onClick(){
-    this.router.navigate(['/products'])
+   return this.router.navigate(['/products'])
   }
   productId!: number;
   viewProduct(id: number) {
     this.productId = id;
-    this.router.navigate(['viewProduct/' + id]);
+  return  this.router.navigate(['viewProduct/' + id]);
   
 }
 display:any=[]
@@ -125,8 +125,8 @@ invokeStripe() {
   }
 }
 
-isHidden:boolean=true
-  none='block'
+isHidden:boolean=true;
+  none='block';
 
 
   ngOnInit(): void {

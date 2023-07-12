@@ -91,9 +91,8 @@ cart:any=[]
   }
 
   onSubmit(form: any) {
-    this.user_details.getUserDetails(form.value);    
     console.log(form.value)
-  
+    return  this.user_details.getUserDetails(form.value);      
   }
 
 }

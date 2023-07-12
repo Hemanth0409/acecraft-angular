@@ -23,7 +23,7 @@ export class SignInComponent implements OnInit {
   user_profile: any;
   react_form!: FormGroup;
   Email: FormControl | any;
-  password: FormControl | any;
+  password: FormControl | any; 
 
   onSubmit(form: any) {
     this.submitted = true;

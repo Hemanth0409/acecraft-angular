@@ -13,7 +13,7 @@ import { UserDetailsService } from 'src/services/user-details.service';
 export class NavComponent implements OnInit {
   public show: boolean = true;
   toggle() {
-    this.show = !this.show;
+   return this.show = !this.show;
   }
   cart_Count = 0;
   auth: boolean = false

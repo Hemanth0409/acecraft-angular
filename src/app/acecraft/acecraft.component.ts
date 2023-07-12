@@ -12,10 +12,10 @@ export class AcecraftComponent implements OnInit {
   
   ngOnInit(): void {
     this.service.getAcecraft_main1().subscribe((res) => {
-      this.acecraft_main1 = res;
+     return this.acecraft_main1 = res;
     });
     this.service.getAcecraft_main2().subscribe((res) => {
-      this.acecraft_main2 = res;
+     return this.acecraft_main2 = res;
     });
   }
 }

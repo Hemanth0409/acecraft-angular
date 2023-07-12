@@ -4,24 +4,21 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
- 
-  userUrl='https://acecraft-json.onrender.com/user_details'
-  
+
+  userUrl = 'https://acecraft-json.onrender.com/user_details'
+
   constructor() { }
 
-public authSubject =new Subject<boolean>();
-validateAuth(data:boolean){
-  this.authSubject.next(data)
-  
-}
-value?:boolean;
-getAuthStatus(){
-this.authSubject.subscribe(
-  data => 
-  {
-    this.value= data;
+  public authSubject = new Subject<boolean>();
+  validateAuth(data: boolean) {
+    return this.authSubject.next(data)
+
   }
-);
-return this.value;
-}
+  value?: boolean;
+  getAuthStatus() {
+    this.authSubject.subscribe(
+      data => { this.value = data; }
+    );
+    return this.value;
+  }
 }
