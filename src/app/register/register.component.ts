@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   }
   react_formRes!: FormGroup;
   Fname: FormControl | any;
-  Lname: FormControl | any
+  Lname: FormControl | any;
   Email: FormControl | any;
   Password: FormControl | any;
   cPassword: FormControl | any;
