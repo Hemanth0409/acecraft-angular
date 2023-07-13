@@ -30,16 +30,16 @@ export class UserDetailsService {
   }
 
   getUser() {
-    return this.http.get<UserDetails[]>(this.user_details)
+    return this.http.get<UserDetails[]>(this.user_details);
   }
   isLogged(form: any, id: number) {
     let Url = this.user_details + '/' + id;
-    form.isLogged = true
-    return this.http.put(Url,form).subscribe(()=>{})
+    form.isLogged = true;
+    return this.http.put(Url,form).subscribe(()=>{});
   } 
   isLoggedOff(form: any, id: number) {
     let Url = this.user_details + '/' + id;
-    form.isLogged = false
-    return this.http.put(Url,form).subscribe(()=>{})
+    form.isLogged = false;
+    return this.http.put(Url,form).subscribe(()=>{});
   } 
 }

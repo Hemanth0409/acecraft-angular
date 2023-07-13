@@ -4,7 +4,9 @@ import { Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserDetailsService } from 'src/services/user-details.service';
 import { UserService } from 'src/services/user.service';
+import { AdminService } from 'src/services/admin.service';
 import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -12,33 +14,30 @@ import Swal from 'sweetalert2';
 })
 export class SignInComponent implements OnInit {
   submitted = false;
-  get f() {
-    return this.react_form.controls;
-  }
+ 
   constructor(
     private userdetails: UserDetailsService,
     private router: Router,
-    private authService: UserService
-  ) {}
+    private authService: UserService, 
+    private adminService: AdminService
+  ) { }
   user_profile: any;
   react_form!: FormGroup;
   Email: FormControl | any;
-  password: FormControl | any; 
+  password: FormControl | any;
 
   onSubmit(form: any) {
     this.submitted = true;
-    console.log(form.value);
     if (this.react_form.invalid) {
       return;
     }
 
     this.userdetails.getUser().subscribe((res) => {
-      this.user_profile = res;
-      console.log(this.user_profile);
+      this.user_profile = res; 
       const user = this.user_profile.find((details: any) => {
         if (
-          details.Email === this.react_form.value.Email &&
-          details.Password === this.react_form.value.password
+          (details.Email === this.react_form.value.Email &&
+          details.Password === this.react_form.value.password)
         ) {
           this.userdetails.isLogged(details, details.id);
           return true;
@@ -46,9 +45,8 @@ export class SignInComponent implements OnInit {
         return false;
       });
       if (user) {
-        console.log(this.user_profile.id);
         this.react_form.reset();
-        localStorage.setItem('token',Math.random().toString())
+        localStorage.setItem('token', Math.random().toString())
         const Toast = Swal.mixin({
           toast: true,
           position: 'top',

@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserDetailsService } from 'src/services/user-details.service';
-import Swal from 'sweetalert2';
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+ form: FormGroup = new FormGroup({});
 
   constructor(private user_details: UserDetailsService,
     private formBuilder: FormBuilder
   ) {
 
   }
+  
   react_formRes!: FormGroup;
   Fname: FormControl | any;
   Lname: FormControl | any;
@@ -28,7 +27,7 @@ export class RegisterComponent implements OnInit {
   City: FormControl | any;
   State: FormControl | any;
   GSTNum: FormControl | any;
-cart:any=[]
+  cart: any = []
 
   ngOnInit(): void {
     this.Fname = new FormControl('', [
@@ -86,13 +85,13 @@ cart:any=[]
       State: this.State,
       GSTNum: this.GSTNum,
       isLogged: this.formBuilder.control(false),
-      
+
     });
   }
 
   onSubmit(form: any) {
     console.log(form.value)
-    return  this.user_details.getUserDetails(form.value);      
+    return this.user_details.getUserDetails(form.value);
   }
 
 }
